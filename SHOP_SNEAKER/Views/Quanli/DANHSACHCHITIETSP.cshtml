@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "DANHSACHCHITIETSP";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+
+@using SHOP_SNEAKER.Models;
+@model List<CHITIETSANPHAM>
+<h2>Danh Sách Sản Phẩm</h2>
+<div class="group">
+    <button onclick="location.href = '/Quanli/THEMCTSP'" class="btn btn-group btn-success">Thêm Chi Tiết Sản Phẩm</button>
+</div>
+<div class="group">
+    <div class="d-flex" style="column-gap:5px">
+        @Html.ValidationMessage("baoloi", "", new { @class = "text-danger" })
+        <input placeholder="Tìm kiếm theo mã . . ." type="hidden" name="baoloi">
+    </div>
+</div>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Mã SP</th>
+            <th>Mã KC</th>
+            <th>Mã MS</th>
+            <th>Mô tả</th>
+            <th>Số Lượng</th>
+        </tr>
+    </thead>
+    <tbody id="productTable">
+       @foreach (CHITIETSANPHAM item in Model)
+       {
+        <tr class="sanpham_1">
+            <td>@item.MASP</td>
+            <td>@item.MAKC</td>
+            <td>@item.MAMS</td>
+            <td class="text-truncate" style="max-width: 150px;">@item.MOTA</td>
+            <td>@item.SOLUONG</td>
+            <td>
+                <a href="@Url.Action("SUA_CTSP","Quanli", new { id = item.MASP , makc = item.MAKC , mams = item.MAMS })" class="btn btn-warning btn-sm">Sửa</a>
+                <a href="@Url.Action("XOA_CTSP", "Quanli", new { id = item.MASP, makc = item.MAKC, mams = item.MAMS })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
+            </td>
+        </tr>
+       }
+    </tbody>
+</table>
+

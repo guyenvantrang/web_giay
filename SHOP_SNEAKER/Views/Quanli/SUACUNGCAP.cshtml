@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "SUACUNGCAP";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+
+@using SHOP_SNEAKER.Models;
+@model NHACUNGCAP
+<form action="/Quanli/SUACUNGCAP" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+    <h2>Sửa Nhà Cung Cấp</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="form-label">Tên Nhà Cung Cấp @Html.ValidationMessage("ma_ncc", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.MANCC" name="ma_ncc" id="ten_kh" type="text" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="form-label">Tên Nhà Cung Cấp @Html.ValidationMessage("ten_ncc", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.TENNCC" name="ten_ncc" id="ten_kh" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="form-label"> Địa chỉ @Html.ValidationMessage("diachi_ncc", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.DIACHI" name="diachi_ncc" id="ten_kh" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <button style="margin-left:25px; margin-top:10px" type="submit" class="btn btn-primary">Cập nhật</button>
+    </div>
+</form>
+
+
+

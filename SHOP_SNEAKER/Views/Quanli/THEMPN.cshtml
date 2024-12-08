@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "THEMPN";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+
+@using SHOP_SNEAKER.Models;
+@model List<NHACUNGCAP>
+
+<form action="/Quanli/THEMPN" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+    <h2>Thêm Phiếu Nhập</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Nhà cung cấp @Html.ValidationMessage("ncc_pn", "", new { @class = "text-danger" })</label>
+                    <select name="ncc_pn" class="form-select" aria-label="Default select example">
+                        <option value="0" selected>Chọn một tùy chọn</option>
+                        @foreach (NHACUNGCAP a in Model)
+                        {
+                            <option value="@a.MANCC">@a.TENNCC</option>
+                        }
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex mt-4">
+        <button style="margin-left:25px" type="submit" class="btn btn-primary">Cập nhật</button>
+    </div>
+</form>
+

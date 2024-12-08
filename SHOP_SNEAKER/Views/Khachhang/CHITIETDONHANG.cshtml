@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "CHITIETDONHANG";
+    Layout = "~/Views/Khachhang/Index.cshtml";
+}
+
+@using SHOP_SNEAKER.Models;
+@model List<CHITIETDONHANG>
+<div class="container " style="margin-top:100px;">
+    <div class="row">
+        <div class="col-3">
+            <div class="card_3 mt-2">
+                <div class="card__content">
+                    <img class="w-100 img-fluid" src="~/Content/hinhanh/hinhgiaodien/giohanng.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <h2 class="text-center" style="font-family:'Alumni Sans Inline One', sans-serif; color:#29042a;">Chi tiết đơn hàng </h2>
+            <div class="card_3 mt-2">
+                <div class="card__content">
+                    <div class="row">
+                        <div class="col">Mã SP</div>
+                        <div class="col">Kích cỡ </div>
+                        <div class="col">Màu sắc</div>
+                        <div class="col">Số lượng</div>
+                        <div class="col">Thành tiền</div>
+                    </div>
+                </div>
+            </div>
+            @if (Model == null)
+            {
+                <p style="font-family:'Alumni Sans Inline One', sans-serif; color:#29042a; text-align:center;margin-top:5% ;font-size:2rem">Đơn hàng trống</p>
+            }
+            else
+            {
+                foreach (CHITIETDONHANG a in Model)
+                {
+                    var giaban = string.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:N0}", a.THANHTIEN);
+
+                    <div class="card_3 mt-2">
+                        <div class="card__content">
+                            <div class="row">
+
+                                <div onclick="location.href = '/Khachhang/CHITIETSANPHAM/@a.MASP'" class="col">@a.MASP</div>
+                             
+                               @if (Session["kichco_chitietdonhang"] != null)
+                               {
+                                   List<KICHCO> kc = Session["kichco_chitietdonhang"] as List<KICHCO>;
+                                   KICHCO kc_timkiem = kc.FirstOrDefault(t => t.MAKC == a.MAKC);
+                                   <div class="col">@kc_timkiem.KICHCO1</div>
+                               }
+                               @if (Session["mausac_chitietdonhang"] != null)
+                               {
+                                   List<MAUSAC> ms = Session["mausac_chitietdonhang"] as List<MAUSAC>;
+                                   MAUSAC ms_timkiem = ms.FirstOrDefault(t => t.MAMS == a.MAMS);
+                                   <div class="col">@ms_timkiem.TENMAUSAC</div>
+                               }       
+                                <div class="col">@a.SOLUONG</div>                         
+                                <div class="col">@giaban VNĐ</div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+               
+            }
+        </div>
+    </div>
+</div>
+

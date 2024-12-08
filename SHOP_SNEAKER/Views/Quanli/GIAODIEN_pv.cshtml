@@ -1,0 +1,21 @@
+﻿@using SHOP_SNEAKER.Models;
+@model List<GIAODIENTRANGCHINH>
+@foreach (GIAODIENTRANGCHINH item in Model)
+{
+    <tr class="sanpham_1">
+        <td>@item.MA</td>
+        <td class="text-truncate" style="max-width: 150px;">@item.TEN</td>
+        <td class="text-truncate" style="max-width: 150px;">@item.MOTA</td>
+        <td class="text-truncate" style="max-width: 150px;">@item.TIEUDE</td>
+        <td class="text-truncate" style="max-width: 150px;">@item.NOIDUNG</td>
+        <td class="text-truncate" style="max-width: 150px;">@item.HINHANH</td>
+        <td class="text-truncate" style="max-width: 150px;">@item.DUONGDAN</td>
+        
+        <td>
+            <a href="@Url.Action("Edit", "SANPHAM", new { id = item.MA })" class="btn btn-warning btn-sm">Sửa</a>
+            <a href="@Url.Action("Details", "SANPHAM", new { id = item.MA })" class="btn btn-info btn-sm">Chi Tiết</a>
+            <a href="@Url.Action("Delete", "SANPHAM", new { id = item.MA })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
+        </td>
+    </tr>
+}
+ 

@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "THEMKICHCO";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+
+<form action="/Quanli/THEMKICHCO" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+    <h2>Thêm Kích Thước</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="form-label">Mã Kích Thước @Html.ValidationMessage("ma_kc", "", new { @class = "text-danger" })</label>
+                    <input value="" name="ma_kc" id="ten_kh" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="form-label"> Tên Kích Thước @Html.ValidationMessage("ten_kc", "", new { @class = "text-danger" })</label>
+                    <input value="1" name="ten_kc" id="ten_kh" type="number" class="form-control" min="1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <button style="margin-left:25px; margin-top:10px" type="submit" class="btn btn-primary">Cập nhật</button>
+    </div>
+</form>
+
+

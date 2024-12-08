@@ -1,0 +1,22 @@
+﻿@using SHOP_SNEAKER.Models;
+@model List<SANPHAM>
+@foreach (SANPHAM item in Model)
+{
+    <tr class="sanpham_1">
+        <td>@item.MASP</td>
+        <td>@item.MALOAI</td>
+        <td class="text-truncate" style="max-width: 150px;">@item.TENSP</td>
+        <td>@item.GIAGOCSP</td>
+        <td class="" style="max-width: 80px;">@item.SOLUONGTON</td>
+        <td>@item.MANH</td>
+        <td><img src="~/Content/hinhanh/hinhanhsanpham/@item.HINHANHBIA" alt="Hình ảnh" class="img-fluid" style="max-width: 50px;"></td>
+        <td>@item.MAHA</td>
+        <td class="text-truncate" style="max-width: 150px;">@item.MOTA</td>
+        <td>@item.GIACHINHTHUCSP</td>
+        <td>
+            <a href="@Url.Action("SUA_SP","Quanli", new { id = item.MASP })" class="btn btn-warning btn-sm">Sửa</a>
+            <a href="@Url.Action("DANHSACHCHITIETSP", "Quanli", new { id = item.MASP })" class="btn btn-info btn-sm">Chi Tiết</a>
+            <a href="@Url.Action("XOA_SP", "Quanli", new { id = item.MASP })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
+        </td>
+    </tr>
+}

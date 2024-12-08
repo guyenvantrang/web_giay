@@ -1,0 +1,15 @@
+﻿@using SHOP_SNEAKER.Models;
+@model List<NHACUNGCAP>
+@foreach (NHACUNGCAP item in Model)
+{
+    <tr class="sanpham_1">
+        <td>@item.MANCC</td>
+        <td>@item.TENNCC</td>
+        <td class="" style="max-width: 80px;">@item.DIACHI</td>
+        <td>
+            <a href="@Url.Action("SUACUNGCAP", "Quanli", new { id = item.MANCC })" class="btn btn-warning btn-sm">Sửa</a>
+            <a href="@Url.Action("XOANHACUNGCAP", "Quanli", new { id = item.MANCC })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
+        </td>
+    </tr>
+}
+

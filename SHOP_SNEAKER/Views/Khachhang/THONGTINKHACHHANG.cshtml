@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "THONGTINKHACHHANG";
+    Layout = "~/Views/Khachhang/Index.cshtml";
+}
+@using SHOP_SNEAKER.Models;
+<div class="container d-flex justify-content-center align-items-center" style="margin-top:100px;margin-bottom:20px;">
+    <div class="form-container_1">
+        <h2 class="text-center" style="font-family:'Alumni Sans Inline One', sans-serif; color:#ffffff;">Thông tin khách hàng</h2>
+        @if (Session["khachhangdangnhap"] != null)
+        {
+            KHACHHANG p = Session["khachhangdangnhap"] as KHACHHANG;
+            <form action="/Khachhang/CAPNHAT_TTTKH" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+                <div class="form-group">
+                    <label for="ten_kh">Tên khách hàng</label>
+                    <input name="ten_kh" id="ten_kh" type="text" value="@p.TENKH">
+                </div>
+                <div class="form-group">
+                    <label for="ngaysinh_kh">Ngày sinh</label>
+                    <input name="ngaysinh_kh" id="ngaysinh_kh" type="date" value="@DateTime.Parse(p.NGAYSINH.ToString()).ToString("yyyy-MM-dd")">
+                </div>
+                <div class="form-group">
+                    <label>Giới tính</label>
+                    <div style="display: flex;">
+                        <label for="gioitinh_nam" style="margin-right: 20px;">
+                            <input name="gioitinh_kh" id="gioitinh_nam" type="radio" value="Nam" @(p.GIOITINH == "Nam" ? "checked" : "")> Nam
+                        </label>
+                        <label for="gioitinh_nu">
+                            <input name="gioitinh_kh" id="gioitinh_nu" type="radio" value="Nữ" @(p.GIOITINH == "Nữ" ? "checked" : "")> Nữ
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="diachi_kh">Địa chỉ</label>
+                    <input name="diachi_kh" id="diachi_kh" type="text" value="@p.DIACHI">
+                </div>
+                <div class="form-group">
+                    <label for="sodienthoai_kh">Số điện thoại @Html.ValidationMessage("sodienthoai_kh", "", new { @class = "text-danger" })</label>
+                    <input name="sodienthoai_kh" id="sodienthoai_kh" type="number" value="@p.SODIENTHOAI">
+                </div>
+                <div class="form-group">
+                    <label for="sothich_kh">Sở thích</label>
+                    <input name="sothich_kh" id="sothich_kh" type="text" value="@p.SOTHICH">
+                </div>
+                <div class="d-flex">
+                    <button style="margin-right:5px" type="submit" class="form-submit-btn">Cập nhật</button>
+                    <button type="button" class="form-submit-btn" onclick="location.href='/Khachhang/DOIMATKHAU_KH'">Đổi mật khẩu</button>
+                </div>
+            </form>
+        }
+    </div>
+</div>
+

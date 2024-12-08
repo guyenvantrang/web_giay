@@ -1,0 +1,13 @@
+﻿@using SHOP_SNEAKER.Models;
+@model List<GIAODIENTRANGCHINH>
+@foreach (GIAODIENTRANGCHINH a in Model)
+{
+    if (a.MA.Split('_')[1].TrimEnd() == "1")
+    {
+        <h1 class="responsive-text logo">@a.TIEUDE</h1>
+    }
+    else
+    {
+        <h2 class="text-center text_6">@a.TIEUDE</h2>
+    }
+}

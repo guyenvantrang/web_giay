@@ -1,0 +1,57 @@
+﻿@using SHOP_SNEAKER.Models
+@model List<GIAODIENTRANGCHINH>
+<div class="binhthuong">
+    @foreach (GIAODIENTRANGCHINH a in Model)
+    {
+        <div class="book">
+            <ul class="nav">
+                <li class="nav-item">
+                    <img class="img-fluid w-25" src="~/Content/hinhanh/hinhgiaodien/Logo.png" />
+                </li>
+                <li class="nav-item">
+                    <p>@a.NOIDUNG</p>
+                </li>
+            </ul>
+            <div class="main_div">
+                <a style="text-decoration:none" href="/Khachhang/@a.DUONGDAN">
+                    <div class="button_3">Khám phá</div>
+                </a>
+            </div>
+            <div class="cover">
+                <img class="img-fluid img_gioithieu" src="~/Content/hinhanh/hinhgiaodien/@a.HINHANH" />
+            </div>
+        </div>
+    }
+</div>
+
+
+<div id="myCarousel" class="carousel slide d-md-none mt-0" data-bs-ride="carousel" data-bs-interval="false" data-aos="fade-up">
+    <div class="carousel-inner">
+        @foreach (GIAODIENTRANGCHINH a in Model)
+        {
+            <div class="carousel-item @((Model.IndexOf(a) == 0) ? "active" : "")">
+                <div class="book">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <img class="img-fluid w-25" src="~/Content/hinhanh/hinhgiaodien/Logo.png" />
+                        </li>
+                        <li class="nav-item">
+                            <p>@a.NOIDUNG</p>
+                        </li>
+                    </ul>
+                    <div class="main_div">
+                        <a style="text-decoration:none" href="/Khachhang/@a.DUONGDAN">
+                            <div class="button_3">Khám phá</div>
+                        </a>
+                    </div>
+                    <div class="cover">
+                        <img class="img-fluid img_gioithieu" src="~/Content/hinhanh/hinhgiaodien/@a.HINHANH" />
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev"></button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next"></button>
+</div>

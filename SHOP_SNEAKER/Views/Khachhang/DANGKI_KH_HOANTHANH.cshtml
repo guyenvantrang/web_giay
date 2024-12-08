@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "DANGKI_KH_HOANTHANH";
+    Layout = "~/Views/Khachhang/Index.cshtml";
+}
+
+@using SHOP_SNEAKER.Models;
+<div class="container d-flex justify-content-center align-items-center" style="margin-top:100px;margin-bottom:20px;">
+    <div class="form-container_1">
+        <h2 class="text-center" style="font-family:'Alumni Sans Inline One', sans-serif; color:#ffffff;">Bước 2</h2>
+            <form action="/Khachhang/DANGKI_KH_HOANTHANH" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+                <div class="form-group">
+                    <label for="ngaysinh_kh">Ngày sinh @Html.ValidationMessage("ngaysinh_kh", "", new { @class = "text-danger" })</label>
+                    <input name="ngaysinh_kh" id="ngaysinh_kh" type="date" value="">
+                </div>
+                <div class="form-group">
+                    <label>Giới tính @Html.ValidationMessage("gioitinh_kh", "", new { @class = "text-danger" })</label>
+                    <div style="display: flex;">
+                        <label for="gioitinh_nam" style="margin-right: 20px;">
+                            <input name="gioitinh_kh" id="gioitinh_nam" type="radio" value="Nam" > Nam
+                        </label>
+                        <label for="gioitinh_nu">
+                            <input name="gioitinh_kh" id="gioitinh_nu" type="radio" value="Nữ"> Nữ
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="diachi_kh">Địa chỉ @Html.ValidationMessage("diachi_kh", "", new { @class = "text-danger" })</label>
+                    <input name="diachi_kh" id="diachi_kh" type="text" value="">
+                </div>
+                <div class="form-group">
+                    <label for="sodienthoai_kh">Số điện thoại @Html.ValidationMessage("sodienthoai_kh", "", new { @class = "text-danger" })</label>
+                    <input name="sodienthoai_kh" id="sodienthoai_kh" type="number" value="">
+                </div>
+                <div class="form-group">
+                    <label for="sothich_kh">Sở thích @Html.ValidationMessage("sothich_kh", "", new { @class = "text-danger" })</label>
+                    <input name="sothich_kh" id="sothich_kh" type="text" value="">
+                </div>
+                <div class="d-flex">
+                    <button style="margin-right:5px" type="submit" class="form-submit-btn">Cập nhật</button>
+                </div>
+            </form>
+    </div>
+</div>
+
+

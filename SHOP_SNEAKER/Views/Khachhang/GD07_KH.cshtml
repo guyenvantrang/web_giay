@@ -1,0 +1,10 @@
+﻿@using SHOP_SNEAKER.Models;
+@model List<GIAODIENTRANGCHINH>
+@foreach (GIAODIENTRANGCHINH a in Model)
+{
+    <div class="col d-flex justify-content-center align-items-center">
+        <a href="/Khachhang/@a.DUONGDAN" class="d-flex justify-content-center align-items-center">
+            <img class="img-fluid w-50" src="~/Content/hinhanh/hinhgiaodien/@a.HINHANH" />
+        </a>
+    </div>
+}

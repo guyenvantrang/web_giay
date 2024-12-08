@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "DANHSACHCHITIETKHUYENMAI";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+
+@using SHOP_SNEAKER.Models;
+@model List<CHITIETKHUYENMAI>
+@{
+    string k = ViewBag.makhuyenmai;
+}
+<h2>Danh Sách Chi Tiết Khuyến Mãi @k</h2>
+
+<div class="d-flex">
+    <div class="group">
+        <a href="@Url.Action("THEMCTKM", "Quanli", new { id = k.Trim() })" class=" btn btn-group btn-success">Thêm Chi Tiết Khuyến Mãi</a>
+    </div>
+    @*@if (Model.Count() != 0)
+    {
+
+        if (Session["phieunhap_pn"] != null)
+        {
+            PHIEUNHAP a = Session["phieunhap_pn"] as PHIEUNHAP;
+            if (a.TRANGTHAI == "Đang Giao" || a.TRANGTHAI == "Đã xác nhận" || a.TRANGTHAI == "Mới Lập")
+            {
+                <div class="group">
+                    <button onclick="location.href = '/Quanli/XACNHANPHIEUNHAP'" class="btn btn-group btn-primary">Xác nhận đơn hàng</button>
+                </div>
+                <div class="group">
+                    <button onclick="location.href = '/Quanli/HUYPHIEUNHAP'" class="btn btn-group btn-danger">Huỷ Đơn Hàng</button>
+                </div>
+            }
+            if (a.TRANGTHAI == "Đã Nhận")
+            {
+                <div class="group">
+                    <button onclick="location.href = '/Quanli/XACNHANNHAPHANG'" class="btn btn-group btn-secondary">Xác Nhận Nhập Hàng</button>
+                </div>
+            }
+
+        }
+
+    }*@
+    <div class="group">
+        <div class="d-flex" style="column-gap:5px">
+            @Html.ValidationMessage("baoloi", "", new { @class = "text-danger" })
+            <input placeholder="Tìm kiếm theo mã . . ." type="hidden" name="baoloi">
+        </div>
+    </div>
+
+</div>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Mã KM</th>
+            <th>Mã SP</th>
+            <th>Tỉ Lệ Giảm</th>
+        </tr>
+    </thead>
+    <tbody id="productTable">
+        @foreach (CHITIETKHUYENMAI item in Model)
+        {
+            <tr class="sanpham_1">
+                <td>@item.MAKM</td>
+                <td>@item.MASP</td>
+                <td>@item.TILEGIAM</td>
+                <td>
+                    <a href="@Url.Action("XOA_CTKM", "Quanli", new { id = item.MAKM.Trim(), masp = item.MASP})" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

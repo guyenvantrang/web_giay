@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "THEMNCC";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+
+<form action="/Quanli/THEMNCC" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+    <h2>Thêm Nhà Cung Cấp</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="form-label">Tên Nhà Cung Cấp @Html.ValidationMessage("ten_ncc", "", new { @class = "text-danger" })</label>
+                    <input value="" name="ten_ncc" id="ten_kh" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="form-label"> Địa chỉ @Html.ValidationMessage("diachi_ncc", "", new { @class = "text-danger" })</label>
+                    <input name="diachi_ncc" id="ten_kh" type="text" class="form-control" min="1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <button style="margin-left:25px; margin-top:10px" type="submit" class="btn btn-primary">Cập nhật</button>
+    </div>
+</form>
+
+
+

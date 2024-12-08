@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "CHITIET_HINHANH";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+
+@using SHOP_SNEAKER.Models;
+@model HINHANH
+
+<h2>Sửa Chi Tiết Hình Ảnh</h2>
+
+<form action="/Quanli/SUA_CHITIET_HINHANH" method="post" enctype="multipart/form-data">
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Tên hình</th>
+                <th>Hình ảnh</th>
+                <th>Lấy hình ảnh</th>
+            </tr>
+        </thead>
+        <tbody id="productTable">
+            @if (Model.DUONGDAN != null)
+            {
+                List<string> a = Model.DUONGDAN.Split(',').ToList();
+                foreach (var k in a)
+                {
+                    <tr class="sanpham_1">
+                        <td><input value="@k" name="tenha" type="text" class="form-control" id="ten_@k" readonly/></td>
+                        <td>
+                            <img class="w-25" src="~/Content/hinhanh/hinhanhsanpham/@k" id="img_@k" />
+                        </td>
+                        <td>
+                            <input name="hinhanh" type="file" class="form-control" id="hinhanh_@k" onchange="xulihinhanh('@k')" />
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <input type="hidden" name="id" value="@Model.MAHA"/>
+    <div class="">
+        <button type="submit" class="btn btn-primary">Cập nhật</button>
+    </div>
+</form>
+<script>
+    function xulihinhanh(k) {
+            var tenHinh = document.getElementById("ten_" + k);
+            var fileInput = document.getElementById("hinhanh_" + k);
+            if (fileInput.files && fileInput.files[0]) {
+                var fileName = fileInput.files[0].name;
+                tenHinh.value = fileName;
+            }
+    }
+</script>

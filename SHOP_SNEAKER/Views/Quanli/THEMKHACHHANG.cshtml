@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "THEMKHACHHANG";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+
+
+<form action="/Quanli/THEMKHACHHANG" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+    <h2>Thêm Khách hàng</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Tên Khách Hàng @Html.ValidationMessage("tenkh", "", new { @class = "text-danger" })</label>
+                    <input name="tenkh" id="ten_kh" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Ngày Sinh @Html.ValidationMessage("ngaysinh", "", new { @class = "text-danger" })</label>
+                    <input name="ngaysinh" id="ten_kh" type="date" class="form-control">
+                </div>  
+            </div>
+            
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Địa Chỉ @Html.ValidationMessage("diachikh", "", new { @class = "text-danger" })</label>
+                    <input name="diachikh" id="ten_kh" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Sở thích @Html.ValidationMessage("sothichkhachhang", "", new { @class = "text-danger" })</label>
+                    <input name="sothichkhachhang" id="ten_kh" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Số Điện Thoại @Html.ValidationMessage("sodienthoaikh", "", new { @class = "text-danger" })</label>
+                    <input name="sodienthoaikh" id="ten_kh" type="text" value="0" class="form-control">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Tên Đăng Nhập @Html.ValidationMessage("tendangnhapkh", "", new { @class = "text-danger" })</label>
+                    <input name="tendangnhapkh" id="ten_kh" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Mật Khẩu @Html.ValidationMessage("matkhaukh", "", new { @class = "text-danger" })</label>
+                    <input name="matkhaukh" id="ten_kh" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Giới tính</label>
+                    <div style="display: flex;">
+                        <label for="gioitinh_nam" style="margin-right: 20px;">
+                            <input name="gioitinh_kh" id="gioitinh_nam" type="radio" value="Nam"> Nam
+                        </label>
+                        <label for="gioitinh_nu">
+                            <input name="gioitinh_kh" id="gioitinh_nu" type="radio" value="Nữ"> Nữ
+                        </label>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="d-flex">
+        <button style="margin-left:23px; margin-top:10px;" type="submit" class="btn btn-primary">Cập nhật</button>
+    </div>
+</form>

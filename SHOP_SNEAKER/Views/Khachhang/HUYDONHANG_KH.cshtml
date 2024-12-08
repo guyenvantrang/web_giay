@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "HUYDONHANG_KH";
+    Layout = "~/Views/Khachhang/Index.cshtml";
+}
+@using SHOP_SNEAKER.Models;
+@model DONHANG
+<div class="container d-flex justify-content-center align-items-center" style="margin-top:100px;margin-bottom:20px;">
+    <div class="form-container_1">
+        <h2 class="text-center" style="font-family:'Alumni Sans Inline One', sans-serif; color:#ffffff;">Bước 2</h2>
+        <form action="/Khachhang/HUYDONHANG_KH" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+            <div class="form-group">
+                <label for="ngaysinh_kh">Mã đơn hàng </label>
+                <input name="MADH" type="number" value="@Model.MADH" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="diachi_kh">Lý do huỷ đơn hàng @Html.ValidationMessage("LIDOHUY", "", new { @class = "text-danger" })</label>
+                <input name="LIDOHUY" type="text" value="">
+            </div>
+
+            <div class="d-flex">
+                <button style="margin-right:5px" type="submit" class="form-submit-btn">Huỷ đơn </button>
+            </div>
+        </form>
+    </div>
+</div>
+

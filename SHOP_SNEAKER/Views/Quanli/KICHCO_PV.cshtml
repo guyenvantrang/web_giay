@@ -1,0 +1,13 @@
+﻿@using SHOP_SNEAKER.Models;
+@model List<KICHCO>
+@foreach (KICHCO item in Model)
+{
+    <tr class="sanpham_1">
+        <td class="text-truncate" style="max-width: 150px;">@item.MAKC</td>
+        <td class="text-truncate" style="max-width: 150px;">@item.KICHCO1</td>
+        <td>
+            <a href="@Url.Action("SUAKICHCO", "Quanli", new { id = item.MAKC.Trim() })" class="btn btn-warning btn-sm">Sửa</a>
+            <a href="@Url.Action("XOAKICHCO", "Quanli", new { id = item.MAKC.Trim() })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
+        </td>
+    </tr>
+}

@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "THEMHINHANH";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+@using SHOP_SNEAKER.Models;
+<h2>Thêm Hình Ảnh Cho Sản Phẩm</h2>
+<form action="/Quanli/THEMHINHANH" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="hinhanh">Mã hình ảnh @Html.ValidationMessage("mahinhanh", "", new { @class = "text-danger" })</label>
+        <input type="text" name="mahinhanh" id="ma_hinhanh" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="hinhanh">Tên hình ảnh @Html.ValidationMessage("tenhinhanh", "", new { @class = "text-danger" })</label>
+        <input type="text" name="tenhinhanh" id="ma_hinhanh" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="hinhanh">Chọn hình ảnh @Html.ValidationMessage("hinhanh", "", new { @class = "text-danger" })</label>
+        <input type="file" name="hinhanh" id="hinhanh" class="form-control" multiple />
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm Hình Ảnh</button>
+</form>

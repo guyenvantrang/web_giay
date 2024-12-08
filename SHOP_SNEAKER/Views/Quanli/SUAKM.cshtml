@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "SUAKM";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+@using SHOP_SNEAKER.Models;
+@model KHUYENMAI
+<form action="/Quanli/SUAKM" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+    <h2>Thêm Khách Khuyến Mãi</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Mã khuyến mãi @Html.ValidationMessage("makm", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.MAKM" name="makm" id="ten_kh" type="text" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Tên khuyến mãi @Html.ValidationMessage("tenkm", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.TENKHUYENMAI" name="tenkm" id="ten_kh" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Ngày bắt đầu @Html.ValidationMessage("ngaybd", "", new { @class = "text-danger" })</label>
+                    <input value="@DateTime.Parse(Model.NGAYBATDAU.ToString()).ToString("yyyy-MM-dd")" name="ngaybd" id="ten_kh" type="date" class="form-control">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Ngày kết thúc @Html.ValidationMessage("ngaykt", "", new { @class = "text-danger" })</label>
+                    <input value="@DateTime.Parse(Model.NGAYKETTHUC.ToString()).ToString("yyyy-MM-dd")" name="ngaykt" id="ten_kh" type="date" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex">
+        <button style="margin-left:23px; margin-top:10px;" type="submit" class="btn btn-primary">Cập nhật</button>
+    </div>
+</form>
+

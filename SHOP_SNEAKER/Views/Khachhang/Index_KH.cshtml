@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Index_KH";
+    Layout = "~/Views/Khachhang/Index.cshtml";
+}
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
+    <div class="carousel-inner">
+        @Html.Action("GD01_KH")
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"></button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"></button>
+</div>
+
+<div class="container text-center mt-2" data-aos="fade-up">
+    @Html.Action("GD02_KH")
+</div>
+
+    @Html.Action("GD03_KH")
+<div class="container text-center mt-2" data-aos="fade-up">
+    @Html.Action("GD04_KH")
+</div>
+<div class="container gioithieu" data-aos="fade-up">
+    @Html.Action("GD05_KH")
+</div>
+<div class="container mt-5" data-aos="fade-up">
+    <div class=" row">
+    @Html.Action("GD06_KH")
+    </div>
+</div>
+<div class="container text-center mt-2" data-aos="fade-up">
+    @Html.Action("GD08_KH")
+</div>
+<div class="container mt-5" data-aos="fade-up">
+    <div class="row">
+        @Html.Action("GD07_KH")
+    </div>
+</div>
+<div class="container text-center mt-2" data-aos="fade-up">
+    @Html.Action("GD09_KH")
+</div>
+<div class="container mb-5">
+    <div class="container_1" data-aos="fade-up">
+        @Html.Action("GD10_KH")
+    </div>
+</div>

@@ -1,0 +1,177 @@
+﻿@using SHOP_SNEAKER.Models;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Tên Trang Web</title>
+    <!-- Thư viện bootstrap CSS -->
+    <link href="~/Content/Bootstrap_5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Thư viện CSS -->
+    <link href="~/Content/CSS/Khachhang/Index.css" rel="stylesheet" />
+    <!-- Link font chữ nhãn hàng -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Arizonia&family=Chewy&family=Dancing+Script:wght@400..700&family=Marck+Script&family=Parisienne&family=Rubik+Wet+Paint&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Splash&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&family=Foldit:wght@100..900&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <header id="menu">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <div class="">
+                    <a class="navbar-brand logo" href="/Khachhang/Index_KH">
+                        Sneaker
+                        <img class="w-100" src="~/Content/hinhanh/hinhgiaodien/Logo.png" />
+                    </a>
+                </div>
+                <button class="navbar-toggler logo" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fas fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto menu_1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Khachhang/Index_KH">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Giới Thiệu</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sản Phẩm
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/Khachhang/LAY_SANPHAM_KH">ALL Product </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dịch Vụ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Liên Hệ</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto menu_1">
+                        <li class="nav-item">
+                            @if (Session["gh"] != null)
+                            {
+                                THEMGIAY s = Session["gh"] as THEMGIAY;
+                                <a class="nav-link" href="/Khachhang/HIENTHIGIOHANG"> ( @s.soluongsanpham() ) <i class="fas fa-shopping-cart"></i> Giỏ Hàng</a>
+                            }    
+                            @if (Session["gh"] == null)
+                            {
+
+                                <a class="nav-link" href="/Khachhang/HIENTHIGIOHANG"> ( 0 ) <i class="fas fa-shopping-cart"></i> Giỏ Hàng</a>
+                            }    
+                                               
+                        </li>
+
+                        @if (Session["khachhangdangnhap"] == null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Khachhang/DANGNHAP_KH"><i class="fas fa-user-circle"></i> Đăng Nhập</a>
+                            </li>
+                        }
+                        @if (Session["khachhangdangnhap"] != null)
+                        {
+                            KHACHHANG p = Session["khachhangdangnhap"] as KHACHHANG;
+                            if (p != null)
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-user-circle"></i> @p.TENKH.ToString()
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="/Khachhang/THONGTINKHACHHANG">Thông tin cá nhân</a></li>
+                                        <li><a class="dropdown-item" href="/Khachhang/LICHSUDONHANG_KH">Lịch sử</a></li>
+                                        <li><a class="dropdown-item text-danger" href="/Khachhang/DANGXUAT_KH">Đăng xuất</a></li>
+                                        @if (Session["admin"]!=null)
+                                        {
+                                            List<ADMIN> l = Session["admin"] as List<ADMIN>;
+                                            ADMIN j = l.FirstOrDefault(t => t.TENDANGNHAP.Trim() == p.TENDANGNHAP.Trim());
+                                            if (j != null)
+                                            {
+                                                <li><a class="dropdown-item text-danger" href="/Khachhang/DANGNHAP_ADMIN">Admin</a></li>
+                                            }
+
+                                        }
+                                        <li></li>
+                                    </ul>
+                                </li>
+                            }
+
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-logo text-center mb-4">
+                    <img src="~/Content/hinhanh/hinhgiaodien/Logo.png" alt="Cửa Hàng Giày" class="img-fluid w-50" />
+                </div>
+                <div class="col-md-4 footer-info mb-4">
+                    <h3>Liên hệ với chúng tôi</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#about" class="text-white nav-link">Giới thiệu</a></li>
+                        <li><a href="#products" class="text-white nav-link">Sản phẩm</a></li>
+                        <li><a href="#contact" class="text-white nav-link">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-contact mb-4">
+                    <h4>Thông tin liên hệ</h4>
+                    <p>Địa chỉ: 123 Đường ABC, Quận XYZ, TP.HCM</p>
+                    <p>Điện thoại: 0123-456-789</p>
+                    <p>Email: contact@cuahanggiay.com</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h5>Kết nối với chúng tôi</h5>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank" class="text-white me-3">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="text-white me-3">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" class="text-white me-3">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center mt-4">
+                <p>&copy; 2024 Cửa Hàng Giày. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Thư viện online JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Thư viện bootstrap JS -->
+    <script src="~/Content/Bootstrap_5/js/jquery.min.js"></script>
+    <script src="~/Content/Bootstrap_5/js/bootstrap.bundle.min.js"></script>
+    <!-- Thư viện JS -->
+    <script src="~/Content/JS/Khachhang/Index.js"></script>
+    <script>
+AOS.init({
+    duration: 800, // Thời gian chạy hiệu ứng (tính bằng ms)
+    once: false // Hiệu ứng chỉ chạy một lần hay mỗi lần cuộn
+});</script>
+</body>
+</html>

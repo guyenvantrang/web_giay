@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "DOIMATKHAU_KH";
+    Layout = "~/Views/Khachhang/Index.cshtml";
+}
+
+@using SHOP_SNEAKER.Models;
+<div class="container d-flex justify-content-center align-items-center" style="margin-top:100px;margin-bottom:20px;">
+    <div class="form-container_1">
+        <h2 class="text-center" style="font-family:'Alumni Sans Inline One', sans-serif; color:#ffffff;">Thông tin khách hàng</h2>
+        @if (Session["khachhangdangnhap"] != null)
+        {
+            <form action="/Khachhang/DOIMATKHAU_KH" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+                <div class="form-group">
+                    <label for="ten_kh">Mật khẩu cũ @Html.ValidationMessage("mkcu_kh", "", new { @class = "text-danger" })</label>
+                    <input name="mkcu_kh" id="ten_kh" type="password" value="">
+                </div>
+
+                <div class="form-group">
+                    <label for="diachi_kh">Mật khẩu mới @Html.ValidationMessage("mkmoi_kh", "", new { @class = "text-danger" })</label>
+                    <input name="mkmoi_kh" id="diachi_kh" type="password" value="">
+                </div>
+                <div class="form-group">
+                    <label for="sodienthoai_kh">Lặp lại mật khẩu @Html.ValidationMessage("xacnhanmkmoi_kh", "", new { @class = "text-danger" })</label>
+                    <input name="xacnhanmkmoi_kh" id="sodienthoai_kh" type="password" value="">
+                </div>
+
+                <div class="d-flex">
+                    <button type="submit" class="form-submit-btn">Đổi mật khẩu</button>
+                </div>
+            </form>
+        }
+    </div>
+</div>
+

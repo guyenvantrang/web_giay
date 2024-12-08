@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "HINHANH";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+<h2>DANH SÁCH HÌNH ẢNH</h2>
+<div class="d-flex" style="column-gap:10px;">
+    <div class="group">
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+            <g>
+                <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+            </g>
+        </svg>
+        <input id="searchInput" placeholder="Tìm kiếm theo tên" type="search" class="input">
+    </div>
+    <div class="group">
+        <button onclick="location.href='/Quanli/THEMHINHANH'" class="btn btn-group btn-success">Thêm Hình Ảnh</button>
+    </div>
+    <div class="group">
+        <div class="d-flex" style="column-gap:5px">
+            <input placeholder="Tìm kiếm theo mã . . ." type="text" name="Matimkiem" id="matimkiem" style="border-bottom:2px solid #808080;border-left:none;border-right:none;border-top:none;outline:none">
+            <button id="timkiemmaclick" class="btn btn-warning" style="border-radius:5px;">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+    <div class="group">
+        <div class="d-flex" style="column-gap:5px">
+            @Html.ValidationMessage("baoloi", "", new { @class = "text-danger" })
+            <input placeholder="Tìm kiếm theo mã . . ." type="hidden" name="baoloi">
+        </div>
+    </div>
+</div>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Mã HA</th>
+            <th>Tên HA</th>
+            <th>Đường dẫn</th>
+        </tr>
+    </thead>
+    <tbody id="productTable">
+        @Html.Action("HINHANH_PV", new { products = Model })
+    </tbody>
+</table>
+
+<script>
+    document.getElementById("searchInput").addEventListener("input", function () {
+        var stringsearch = document.getElementById("searchInput").value;  // Lấy giá trị từ ô tìm kiếm
+        // Kiểm tra nếu người dùng nhập vào giá trị
+            $.ajax({
+                url: '/Quanli/TIMKIEMTENHINHANH',  // Đường dẫn tới hành động tìm kiếm
+                type: 'GET',
+                data: { a: stringsearch },  // Gửi từ khóa tìm kiếm tới controller
+                success: function (data) {
+                    console.log(data);  // Kiểm tra dữ liệu trả về từ server
+                    $('#productTable').html(data);  // Cập nhật lại danh sách sản phẩm
+                }
+            });
+    });
+    document.getElementById("timkiemmaclick").addEventListener("click", function () {
+        var stringsearch = document.getElementById("matimkiem").value;  // Lấy giá trị từ ô tìm kiếm
+      
+            $.ajax({
+                url: '/Quanli/TIMKIEMTHEOMAHINHANH',  // Đường dẫn tới hành động tìm kiếm
+                type: 'GET',
+                data: { a: stringsearch },  // Gửi từ khóa tìm kiếm tới controller
+                success: function (data) {
+                    console.log(data);  // Kiểm tra dữ liệu trả về từ server
+                    $('#productTable').html(data);  // Cập nhật lại danh sách sản phẩm
+                }
+            });
+        
+    });
+</script>
+
+

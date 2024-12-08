@@ -1,0 +1,14 @@
+﻿@using SHOP_SNEAKER.Models;
+@model List<HINHANH>
+@foreach (HINHANH item in Model)
+{
+    <tr class="sanpham_1">
+        <td class="text-truncate" style="max-width: 150px;">@item.MAHA</td>
+        <td class="text-truncate" style="max-width: 150px;">@item.TENHINHANH</td>
+        <td class="text-truncate" style="max-width: 150px;">@item.DUONGDAN</td>
+        <td>
+            <a href="@Url.Action("CHITIET_HINHANH","Quanli", new { id = item.MAHA.Trim() })" class="btn btn-info btn-sm">Chi Tiết</a>
+            <a href="@Url.Action("XOA_CHITIETHINHANH", "Quanli", new { id = item.MAHA.Trim() })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
+        </td>
+    </tr>
+}

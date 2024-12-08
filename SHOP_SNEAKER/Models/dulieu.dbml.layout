@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.75, 21.75" name="dulieu">
+  <DataContextMoniker Name="/dulieuDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0c779ded-1542-4dba-8ffd-13f5f2fcd3f4" absoluteBounds="8.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/dulieuDataContext/ADMIN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5fdb088c-d180-4bf9-b275-5fd33ab6e822" absoluteBounds="8.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d251967-749f-4b96-be6e-cc99ad33a104" absoluteBounds="3.5, 4.625, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/dulieuDataContext/SANPHAM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bebfe4df-d5b5-4aa9-aa67-ec7773c68936" absoluteBounds="3.515, 5.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="129c9013-b495-4999-a565-9bc5002e137a" absoluteBounds="0.875, 9.25, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/dulieuDataContext/CHITIETDONHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aad975cc-017a-440c-b1be-339225aba6d0" absoluteBounds="0.88999999999999968, 9.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dfc752e6-a4a5-4ad0-8aba-c4bdeef349e6" absoluteBounds="6.25, 5.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dulieuDataContext/CHITIETKHUYENMAI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f627f77a-64f4-410b-9e1b-748e5a00d22a" absoluteBounds="6.265, 5.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a22ed7ee-e27f-4a02-825a-e636c2c6934b" absoluteBounds="6.25, 2.125, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/dulieuDataContext/CHITIETSANPHAM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a848409b-ed96-4162-acf8-0da57fc473a5" absoluteBounds="6.265, 2.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62a736c8-2d8a-4143-9330-03a25427928c" absoluteBounds="3.5, 18.375, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/dulieuDataContext/DONHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b758484d-e9d6-4ba4-9fc9-71d3007f1d37" absoluteBounds="3.515, 18.835, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="69785659-244d-4e98-82c6-429ca2ae330e" absoluteBounds="8.75, 7.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dulieuDataContext/GIAODIENTRANGCHINH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d9549783-f7c3-4591-a840-3ed0c1f2a433" absoluteBounds="8.765, 8.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0d7aa79e-04ad-406d-883a-b241595796ce" absoluteBounds="0.75, 3.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dulieuDataContext/HINHANH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7cb32624-6bb4-4893-b694-f54a97700d71" absoluteBounds="0.765, 3.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c8949d6-9679-414b-af0d-51bd16090c66" absoluteBounds="0.75, 18.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/dulieuDataContext/KHACHHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="126c2f4d-e9e8-4e5a-9566-7140e8eb8856" absoluteBounds="0.765, 19.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="15223be9-540d-4b6e-99e4-d1f1efb0d2f0" absoluteBounds="3.5, 12.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dulieuDataContext/KHUYENMAI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="670355fc-910e-487c-aa60-36ec6c373538" absoluteBounds="3.515, 12.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="20ba7e47-fc18-458a-b27b-c29b4c0b71be" absoluteBounds="3.5, 1.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/dulieuDataContext/KICHCO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9d9cc79-5bcd-4eb8-83e7-7342dd34939d" absoluteBounds="3.515, 1.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="517bfe36-b921-4dd0-bd2c-3a7bbddb3e36" absoluteBounds="0.75, 7.375, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/dulieuDataContext/LOAISANPHAM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93f267b8-2cdf-4185-88b3-131523e838b2" absoluteBounds="0.765, 7.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="52c9c6c3-3069-4a2b-a95b-99fb29c019c7" absoluteBounds="3.5, 8.375, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/dulieuDataContext/MAUSAC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ed5db89a-bfea-41ee-a4b4-d38f912e508b" absoluteBounds="3.515, 8.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d14e62b-d3a5-46fc-9977-d6d0e1d2e13c" absoluteBounds="3.75, 15.25, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/dulieuDataContext/NHACUNGCAP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c4cb023b-5596-4fb3-815c-07ff19170fe0" absoluteBounds="3.765, 15.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fa53b028-de0b-4fd8-a1b6-dcbd70b0e73b" absoluteBounds="0.75, 5.375, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/dulieuDataContext/NHANHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0539656d-f8f6-4010-a79f-21a0f96738f9" absoluteBounds="0.765, 5.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f9a745ea-f017-44ee-a252-c8334cef585d" absoluteBounds="6.5, 15.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/dulieuDataContext/PHIEUNHAP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea5572fe-a77b-4ba3-9d2a-a88f7508087f" absoluteBounds="6.515, 15.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.5 : 6.9944482421875); (2.84375 : 6.9944482421875); (2.84375 : 9.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dulieuDataContext/SANPHAM/SANPHAM_CHITIETDONHANG" />
+      <nodes>
+        <classShapeMoniker Id="2d251967-749f-4b96-be6e-cc99ad33a104" />
+        <classShapeMoniker Id="129c9013-b495-4999-a565-9bc5002e137a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.94314697265625); (5.85416666666667 : 5.94314697265625 : JumpStart); (6.02083333333333 : 5.94314697265625 : JumpEnd); (6.25 : 5.94314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dulieuDataContext/SANPHAM/SANPHAM_CHITIETKHUYENMAI" />
+      <nodes>
+        <classShapeMoniker Id="2d251967-749f-4b96-be6e-cc99ad33a104" />
+        <classShapeMoniker Id="dfc752e6-a4a5-4ad0-8aba-c4bdeef349e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.625); (5.875 : 4.25); (5.875 : 3.01044840494792); (6.25 : 3.01044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dulieuDataContext/SANPHAM/SANPHAM_CHITIETSANPHAM" />
+      <nodes>
+        <classShapeMoniker Id="2d251967-749f-4b96-be6e-cc99ad33a104" />
+        <classShapeMoniker Id="a22ed7ee-e27f-4a02-825a-e636c2c6934b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 18.53125); (2.84375 : 18.53125); (2.84375 : 11.2131982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dulieuDataContext/DONHANG/DONHANG_CHITIETDONHANG" />
+      <nodes>
+        <classShapeMoniker Id="62a736c8-2d8a-4143-9330-03a25427928c" />
+        <classShapeMoniker Id="129c9013-b495-4999-a565-9bc5002e137a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.9062475); (2.77604166666667 : 3.9062475 : JumpStart); (2.94270833333333 : 3.9062475 : JumpEnd); (4.4687475 : 3.9062475); (4.4687475 : 4.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dulieuDataContext/HINHANH/HINHANH_SANPHAM" />
+      <nodes>
+        <classShapeMoniker Id="0d7aa79e-04ad-406d-883a-b241595796ce" />
+        <classShapeMoniker Id="2d251967-749f-4b96-be6e-cc99ad33a104" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 20.0200512695313); (3.5 : 20.0200512695313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dulieuDataContext/KHACHHANG/KHACHHANG_DONHANG" />
+      <nodes>
+        <classShapeMoniker Id="3c8949d6-9679-414b-af0d-51bd16090c66" />
+        <classShapeMoniker Id="62a736c8-2d8a-4143-9330-03a25427928c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 12.9142976888021); (7.25 : 12.9142976888021); (7.25 : 6.6362939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dulieuDataContext/KHUYENMAI/KHUYENMAI_CHITIETKHUYENMAI" />
+      <nodes>
+        <classShapeMoniker Id="15223be9-540d-4b6e-99e4-d1f1efb0d2f0" />
+        <classShapeMoniker Id="dfc752e6-a4a5-4ad0-8aba-c4bdeef349e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 1.97199625651042); (2.859375 : 1.97199625651042); (2.859375 : 9.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dulieuDataContext/KICHCO/KICHCO_CHITIETDONHANG" />
+      <nodes>
+        <classShapeMoniker Id="20ba7e47-fc18-458a-b27b-c29b4c0b71be" />
+        <classShapeMoniker Id="129c9013-b495-4999-a565-9bc5002e137a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.28956726680188); (6.25 : 2.28956726680188)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dulieuDataContext/KICHCO/KICHCO_CHITIETSANPHAM" />
+      <nodes>
+        <classShapeMoniker Id="20ba7e47-fc18-458a-b27b-c29b4c0b71be" />
+        <classShapeMoniker Id="a22ed7ee-e27f-4a02-825a-e636c2c6934b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.375); (2.78482443490112 : 7.34017556509888 : JumpStart); (2.91830056509888 : 7.20669943490112 : JumpEnd); (3.125 : 7); (3.125 : 7.73394143289263); (3.50153746153846 : 7.35740397135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dulieuDataContext/LOAISANPHAM/LOAISANPHAM_SANPHAM" />
+      <nodes>
+        <classShapeMoniker Id="517bfe36-b921-4dd0-bd2c-3a7bbddb3e36" />
+        <classShapeMoniker Id="2d251967-749f-4b96-be6e-cc99ad33a104" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 9.40949625651042); (2.875 : 9.40949625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dulieuDataContext/MAUSAC/MAUSAC_CHITIETDONHANG" />
+      <nodes>
+        <classShapeMoniker Id="52c9c6c3-3069-4a2b-a95b-99fb29c019c7" />
+        <classShapeMoniker Id="129c9013-b495-4999-a565-9bc5002e137a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.48071242863582 : 8.375); (5.9375 : 7.91821242863582); (5.9375 : 3.01044840494792); (6.25 : 3.01044840494792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dulieuDataContext/MAUSAC/MAUSAC_CHITIETSANPHAM" />
+      <nodes>
+        <classShapeMoniker Id="52c9c6c3-3069-4a2b-a95b-99fb29c019c7" />
+        <classShapeMoniker Id="a22ed7ee-e27f-4a02-825a-e636c2c6934b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.97199625651042); (2.77604166666667 : 5.97199625651042 : JumpStart); (2.94270833333333 : 5.97199625651042 : JumpEnd); (3.5 : 5.97199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dulieuDataContext/NHANHANG/NHANHANG_SANPHAM" />
+      <nodes>
+        <classShapeMoniker Id="fa53b028-de0b-4fd8-a1b6-dcbd70b0e73b" />
+        <classShapeMoniker Id="2d251967-749f-4b96-be6e-cc99ad33a104" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 15.9431469726562); (6.5 : 15.9431469726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dulieuDataContext/NHACUNGCAP/NHACUNGCAP_PHIEUNHAP" />
+      <nodes>
+        <classShapeMoniker Id="8d14e62b-d3a5-46fc-9977-d6d0e1d2e13c" />
+        <classShapeMoniker Id="f9a745ea-f017-44ee-a252-c8334cef585d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c867374f-b12b-4e1d-a23c-807474094a8d" absoluteBounds="9.5, 4.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/dulieuDataContext/CHITIETPHIEUNHAP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad92a70f-996c-48e8-a2fc-6428c2531f96" absoluteBounds="9.515, 5.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.5368455607472); (6.03125 : 3.0680955607472); (6.03125 : 4.375); (9.125 : 4.375); (9.5 : 4.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dulieuDataContext/KICHCO/KICHCO_CHITIETPHIEUNHAP" />
+      <nodes>
+        <classShapeMoniker Id="20ba7e47-fc18-458a-b27b-c29b4c0b71be" />
+        <classShapeMoniker Id="c867374f-b12b-4e1d-a23c-807474094a8d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.39520502714343); (6.125 : 7.77020502714343); (6.125 : 7.0881982421875); (7.16666666666667 : 7.0881982421875 : JumpStart); (7.33333333333333 : 7.0881982421875 : JumpEnd); (8.32291666666667 : 7.0881982421875 : JumpStart); (8.48958333333333 : 7.0881982421875 : JumpEnd); (9.125 : 7.0881982421875); (9.5 : 6.7131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dulieuDataContext/MAUSAC/MAUSAC_CHITIETPHIEUNHAP" />
+      <nodes>
+        <classShapeMoniker Id="52c9c6c3-3069-4a2b-a95b-99fb29c019c7" />
+        <classShapeMoniker Id="c867374f-b12b-4e1d-a23c-807474094a8d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 15.125); (8.40625 : 5.0000025); (9.5 : 5.0000025)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dulieuDataContext/PHIEUNHAP/PHIEUNHAP_CHITIETPHIEUNHAP" />
+      <nodes>
+        <classShapeMoniker Id="f9a745ea-f017-44ee-a252-c8334cef585d" />
+        <classShapeMoniker Id="c867374f-b12b-4e1d-a23c-807474094a8d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.7812525); (5.85416666666667 : 4.7812525 : JumpStart); (6.02083333333333 : 4.7812525 : JumpEnd); (9.5 : 4.7812525)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dulieuDataContext/SANPHAM/SANPHAM_CHITIETPHIEUNHAP" />
+      <nodes>
+        <classShapeMoniker Id="2d251967-749f-4b96-be6e-cc99ad33a104" />
+        <classShapeMoniker Id="c867374f-b12b-4e1d-a23c-807474094a8d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

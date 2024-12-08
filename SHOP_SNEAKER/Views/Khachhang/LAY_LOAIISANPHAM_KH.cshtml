@@ -1,0 +1,9 @@
+﻿@using SHOP_SNEAKER.Models;
+@model List<LOAISANPHAM>
+@foreach (LOAISANPHAM a in Model)
+{
+    <li class="nav-item">
+        <a class="nav-link"  href="/Khachhang/LAY_LOAIISANPHAM_KH_/@a.MALOAI">@a.TENLOAI</a>
+    </li>
+}
+

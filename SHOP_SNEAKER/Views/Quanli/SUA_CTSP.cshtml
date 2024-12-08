@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "SUA_CTSP";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+@using SHOP_SNEAKER.Models;
+@model CHITIETSANPHAM
+
+ @*Session["KichCo_sua_ctsp"] = kc;
+            Session["MauSac_sua_ctsp"] = ms;
+            Session["nhanhang_sua_ctsp"] = nh;*@
+<form action="/Quanli/SUA_CTSP" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+    <h2>SỬA CHI TIẾT SẢN PHẨM </h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="form-label">Mã Sản Phẩm @Html.ValidationMessage("ma_ctsp", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.MASP" name="ma_ctsp" id="ten_kh" type="number" class="form-control" readonly>
+                </div>
+            </div>
+           
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Kích Cỡ @Html.ValidationMessage("kc_ctsp", "", new { @class = "text-danger" })</label>
+
+                        @if (Session["KichCo_sua_ctsp"] != null)
+                        {
+                            List<KICHCO> l = Session["KichCo_sua_ctsp"] as List<KICHCO>;
+                            KICHCO p = l.FirstOrDefault(t => t.MAKC == Model.MAKC);
+                            <input value="@p.KICHCO1" name="kc_ctsp" id="ten_kh" type="text" class="form-control" readonly>
+                        }
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Màu Sắc @Html.ValidationMessage("ms_ctsp", "", new { @class = "text-danger" })</label>
+                        @if (Session["MauSac_sua_ctsp"] != null)
+                        {
+                            List<MAUSAC> l = Session["MauSac_sua_ctsp"] as List<MAUSAC>;
+                            MAUSAC p = l.FirstOrDefault(t => t.MAMS == Model.MAMS);
+                            <input value="@p.TENMAUSAC" name="ms_ctsp" id="ten_kh" type="text" class="form-control" readonly>
+                        }
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Nội dung mô tả @Html.ValidationMessage("mota_ctsp", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.MOTA" name="mota_ctsp" id="ten_kh" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Nội dung mô tả @Html.ValidationMessage("soluong_ctsp", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.SOLUONG" name="soluong_ctsp" id="ten_kh" type="number" class="form-control" min="0">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="">
+        <button style="margin-left:25px; margin-top:10px" type="submit" class="btn btn-primary">Cập nhật</button>
+    </div>
+</form>

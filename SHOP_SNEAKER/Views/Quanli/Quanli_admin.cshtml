@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Tên Trang Web</title>
+    <!-- Thư viện bootstrap CSS -->
+    <link href="~/Content/Bootstrap_5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Thư viện CSS -->
+    <link href="~/Content/CSS/Admin/Index.css" rel="stylesheet" />
+    <!-- Link font chữ nhãn hàng -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Arizonia&family=Chewy&family=Dancing+Script:wght@400..700&family=Marck+Script&family=Parisienne&family=Rubik+Wet+Paint&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Splash&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&family=Foldit:wght@100..900&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <ul class="nav menu flex-column">
+                    <li class="nav-item">
+                        <h2 onclick="location.href = '/Quanli/Index_ql'" style="font-family:'Alumni Sans Inline One', sans-serif; color:#29042a;font-weight:400" class="text-center">Shop Sneaker</h2>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productMenu" data-bs-toggle="collapse" aria-expanded="false" aria-controls="productMenu">
+                            Sản Phẩm
+                        </a>
+                        <div class="collapse" id="productMenu">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item"><a class="nav-link" href="/Quanli/SANPHAM">&#10159 Danh Sách Sản Phẩm</a></li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="productMenu">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item"><a class="nav-link" href="/Quanli/HINHANH">&#10159 Hình ảnh</a></li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="productMenu">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item"><a class="nav-link" href="/Quanli/KICHCO">&#10159 kích cỡ</a></li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="productMenu">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item"><a class="nav-link" href="/Quanli/MAUSAC">&#10159 Màu sắc</a></li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="productMenu">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item"><a class="nav-link" href="/Quanli/NHANHANG">&#10159 Nhãn hàng</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#orderMenu" data-bs-toggle="collapse" aria-expanded="false" aria-controls="orderMenu">
+                            Đơn Hàng
+                        </a>
+                        <div class="collapse" id="orderMenu">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item"><a class="nav-link" href="/Quanli/DONHANG">&#10159 Danh Sách Đơn Hàng</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#customerMenu" data-bs-toggle="collapse" aria-expanded="false" aria-controls="customerMenu">
+                            Khách Hàng
+                        </a>
+                        <div class="collapse" id="customerMenu">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item"><a class="nav-link" href="/Quanli/KHACHHANG">&#10159 Danh Sách Khách Hàng</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Phieunhap" data-bs-toggle="collapse" aria-expanded="false" aria-controls="customerMenu">
+                            Phiếu Nhập
+                        </a>
+                        <div class="collapse" id="Phieunhap">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item"><a class="nav-link" href="/Quanli/NHACUNGCAP">&#10159 Nhà cung cấp</a></li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="Phieunhap">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item"><a class="nav-link" href="/Quanli/PHIEUNHAP">&#10159 Danh sách phiếu nhập</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Khuyenmai" data-bs-toggle="collapse" aria-expanded="false" aria-controls="customerMenu">
+                            Khuyến Mãi
+                        </a>
+                        <div class="collapse" id="Khuyenmai">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item"><a class="nav-link" href="/Quanli/KHUYENMAI">&#10159 Danh Sách Khuyến Mãi</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Quanli/admin">
+                            Admin
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#GDKH" data-bs-toggle="collapse" aria-expanded="false" aria-controls="customerMenu">
+                            Giao diện khách hàng
+                        </a>
+                        <div class="collapse" id="GDKH">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item"><a class="nav-link" href="/Quanli/GIAODIEN">&#10159 Danh sách giao diện</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-10 overflow-auto">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <!-- Thư viện online JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Thư viện bootstrap JS -->
+    <script src="~/Content/Bootstrap_5/js/jquery.min.js"></script>
+    <script src="~/Content/Bootstrap_5/js/bootstrap.bundle.min.js"></script>
+    <!-- Thư viện JS -->
+    <script src="~/Content/JS/Admin/Index.js"></script>
+</body>
+
+</html>

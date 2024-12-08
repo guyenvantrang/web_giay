@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "THEMCTPN";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+
+
+@using SHOP_SNEAKER.Models;
+@model PHIEUNHAP
+@*  Session["KichCo_ctsp"] = kc;
+    Session["MauSac_ctsp"] = ms;
+    Session["nhanhang_ctsp"] = nh;*@
+
+<form action="/Quanli/THEMCTPN" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+    <h2>Thêm Sản Phẩm Cho Phiếu Nhập @Model.MAPN</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    @if (ViewBag.mathemphieunhap != null)
+                    {
+                        int k = ViewBag.mathemphieunhap;
+                    }
+                    <label class="form-label">Mã Phiếu Nhập @Html.ValidationMessage("ma_pn", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.MAPN" name="ma_pn" id="ten_kh" type="number" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="form-label">Mã Sản Phẩm @Html.ValidationMessage("masp_pn", "", new { @class = "text-danger" })</label>
+                    <select name="masp_pn" class="form-select" aria-label="Default select example">
+                        <option value="0" selected>Chọn một tùy chọn</option>
+                        @if (Session["sanpham_pn"] != null)
+                        {
+                            List<SANPHAM> l = Session["sanpham_pn"] as List<SANPHAM>;
+                            foreach (SANPHAM a in l)
+                            {
+                                <option value="@a.MASP">@a.TENSP</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Kích Cỡ @Html.ValidationMessage("kc_pn", "", new { @class = "text-danger" })</label>
+                    <select name="kc_pn" class="form-select" aria-label="Default select example">
+                        <option value="" selected>Chọn một tùy chọn</option>
+                        @if (Session["KichCo_pn"] != null)
+                        {
+                            List<KICHCO> l = Session["KichCo_pn"] as List<KICHCO>;
+                            foreach (KICHCO a in l)
+                            {
+                                <option value="@a.MAKC">@a.KICHCO1</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Màu Sắc @Html.ValidationMessage("ms_pn", "", new { @class = "text-danger" })</label>
+                    <select name="ms_pn" class="form-select" aria-label="Default select example">
+                        <option value="" selected>Chọn một tùy chọn</option>
+                        @if (Session["mausac_pn"] != null)
+                        {
+                            List<MAUSAC> l = Session["mausac_pn"] as List<MAUSAC>;
+                            foreach (MAUSAC a in l)
+                            {
+                                <option value="@a.MAMS">@a.TENMAUSAC</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Số lượng @Html.ValidationMessage("soluong_ctsp", "", new { @class = "text-danger" })</label>
+                    <input value="0" name="soluong_pn" id="ten_kh" type="number" class="form-control" min="1">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="">
+        <button style="margin-left:25px; margin-top:10px" type="submit" class="btn btn-primary">Cập nhật</button>
+    </div>
+</form>
+

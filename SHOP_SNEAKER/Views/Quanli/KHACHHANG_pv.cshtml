@@ -1,0 +1,19 @@
+﻿@using SHOP_SNEAKER.Models;
+@model List<KHACHHANG>
+@foreach (KHACHHANG item in Model)
+{
+    <tr class="sanpham_1">
+        <td>@item.MAKH</td>
+        <td class="text-truncate" style="max-width:50px">@item.TENKH</td>
+        <td>@DateTime.Parse(item.NGAYSINH.ToString()).ToString("dd/MM/yyyy")</td>
+        <td>@item.GIOITINH</td>
+        <td class="text-truncate" style="max-width:70px">@item.DIACHI</td>
+        <td>@item.SODIENTHOAI</td>
+        <td class="text-truncate">@item.SOTHICH</td>
+        <td>@item.TENDANGNHAP</td>
+        <td class="text-truncate" style="max-width:70px">@item.MATKHAU</td>
+        <td>
+            <a href="@Url.Action("XOAKHACHHANG", "Quanli", new { id = item.MAKH })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
+        </td>
+    </tr>
+}

@@ -1,0 +1,2067 @@
+﻿/* Thiết lập giao diện thanh menu */
+body {
+    overflow: auto;
+    overflow-y: scroll;
+}
+
+.navbar-custom {
+    background-image: linear-gradient(to right, #000000, #444343, #706e6e);
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ecf0f1 !important;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar-custom .nav-link:hover {
+    color: rgb(255, 255, 255) !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.dropdown-menu {
+    background-image: linear-gradient(to right, #000000, #444343, #706e6e);
+}
+
+.dropdown-item {
+    color: #ecf0f1 !important;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-image: linear-gradient(to right, #241a27, #301751, #230075);
+    color: rgb(121, 49, 255);
+    opacity: 1;
+    box-shadow: 1px 1px 3px 1px;
+    border-radius: 1px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 767px) {
+    .navbar-custom {
+        padding: 15px;
+        /* Điều chỉnh padding cho màn hình nhỏ */
+    }
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+    /* Thêm màu viền cho nút */
+}
+
+.navbar-brand img {
+    max-width: 50px;
+    /* Chiều rộng tối đa */
+    height: auto;
+    /* Giữ tỷ lệ khung hình */
+    filter: sepia(100%) hue-rotate(120deg) saturate(200%) brightness(3);
+}
+
+.logo {
+    font-family: "Rubik Wet Paint", system-ui !important;
+    /* Font chữ logo */
+    display: inline-block;
+    /* Để hiệu ứng chạy chữ hoạt động */
+    font-size: 1.5em;
+    /* Kích thước chữ */
+    background: linear-gradient(270deg, #FF5733, #33FF57, #3357FF, #FF33A1);
+    /* Gradient nhiều màu */
+    background-size: 300%;
+    /* Để gradient di chuyển */
+    -webkit-background-clip: text;
+    /* Clip nền ra chữ */
+    -webkit-text-fill-color: transparent;
+    /* Làm cho chữ trong suốt */
+    animation: marquee 10s linear infinite;
+    /* Hiệu ứng chạy chữ */
+    animation: gradient-animation 5s ease-in-out infinite;
+    /* Hiệu ứng màu chạy */
+}
+
+.text_3 {
+    font-family: "Rubik Wet Paint", system-ui !important;
+    /* Font chữ logo */
+    color: black;
+}
+.text_6{
+    font-family:"Splash", cursive !important;
+    font-weight:700;
+    
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.text_2 {
+    font-family: "Rubik Wet Paint", system-ui !important;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+#menu {
+    position: fixed;
+    /* Giữ menu ở vị trí cố định */
+    width: 100%;
+    /* Chiếm toàn bộ chiều ngang */
+    top: 0;
+    /* Đặt menu ở trên cùng */
+    z-index: 1000;
+    /* Đảm bảo menu nằm trên các phần tử khác */
+    transition: top 0.3s;
+    /* Hiệu ứng chuyển động mượt mà */
+}
+
+.carousel-indicators button {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Màu nền mờ */
+    border: none;
+    /* Xóa viền */
+    border-radius: 50%;
+    /* Làm nút tròn */
+    width: 12px;
+    /* Kích thước nút */
+    height: 12px;
+    /* Kích thước nút */
+    margin: 0 5px;
+    /* Khoảng cách giữa các nút */
+}
+
+.carousel {
+    margin-top: 100px;
+}
+
+.carousel-indicators button.active {
+    background-color: #fff;
+    /* Màu nền cho nút đang hoạt động */
+}
+
+.carousel-indicators button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Màu nền khi hover */
+}
+
+footer {
+    background-color: #333;
+}
+
+.social-icons a {
+    font-size: 24px; /* Kích thước biểu tượng */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Màu sắc khi hover */
+}
+
+
+
+
+.responsive-text {
+    font-size: 2rem;
+    /* Default font size */
+}
+
+@media (max-width: 1200px) {
+    .responsive-text {
+        font-size: 1.75rem;
+        /* Font size for large devices */
+    }
+}
+
+@media (max-width: 992px) {
+    .responsive-text {
+        font-size: 1.5rem;
+        /* Font size for medium devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .responsive-text {
+        font-size: 1.25rem;
+        /* Font size for small devices */
+    }
+}
+
+@media (max-width: 576px) {
+    .responsive-text {
+        font-size: 1rem;
+        /* Font size for extra small devices */
+    }
+}
+
+.menu_1>li:hover {
+    border-radius:2px!important;
+    opacity: 1;
+    box-shadow: 1px 1px 3px 1px rgb(255, 255, 255);
+}
+
+.menu_1>li>ul {
+    box-shadow: none;
+    border-radius: 2px!important;
+}
+
+
+
+
+
+/* From Uiverse.io by andrew-demchenk0 */
+/* before adding the img to the div with the 
+    "card-img" class, remove css styles 
+    .card-img .img::before and .card-img .img::after,
+    then set the desired styles for .card-img. */
+.card_a {
+    width: 230px;
+    height: auto;
+    background: #fff;
+    border: 2px solid #323232;
+    box-shadow: 4px 4px #323232;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    column-gap: 10px;
+    margin-left: 25px;
+    margin-top: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card_sp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:center
+}
+
+.card_a:last-child {
+    justify-content: flex-end;
+}
+
+.card-img_a {
+    /* clear and add new css */
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+}
+
+.card-img_a .img_a {
+    /* delete */
+    transform: scale(1);
+    position: relative;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    border-top-left-radius: 80px 50px;
+    border-top-right-radius: 80px 50px;
+    border: 2px solid black;
+    background-color: #228b22;
+    background-image: linear-gradient(to top, transparent 10px, rgba(0, 0, 0, 0.3) 10px, rgba(0, 0, 0, 0.3) 13px, transparent 13px);
+}
+
+.card-img_a .img_a::before {
+    /* delete */
+    content: '';
+    position: absolute;
+    width: 65px;
+    height: 110px;
+    margin-left: -32.5px;
+    left: 50%;
+    bottom: -4px;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.7) 30%, transparent 30%), linear-gradient(to top, transparent 17px, rgba(0, 0, 0, 0.3) 17px, rgba(0, 0, 0, 0.3) 20px, transparent 20px), linear-gradient(to right, black 2px, transparent 2px), linear-gradient(to left, black 2px, transparent 2px), linear-gradient(to top, black 2px, #228b22 2px);
+    background-size: 60% 10%, 100% 100%, 100% 65%, 100% 65%, 100% 50%;
+    background-position: center 3px, center bottom, center bottom, center bottom, center bottom;
+    border-radius: 0 0 4px 4px;
+    z-index: 2;
+}
+
+.card-img_a .img_a::after {
+    /* delete */
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 28px;
+    height: 28px;
+    margin-left: -14px;
+    left: 50%;
+    top: -13px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(80deg, #ffc0cb 45%, transparent 45%), linear-gradient(-175deg, #ffc0cb 45%, transparent 45%), linear-gradient(80deg, rgba(0, 0, 0, 0.2) 51%, rgba(0, 0, 0, 0) 51%), linear-gradient(-175deg, rgba(0, 0, 0, 0.2) 51%, rgba(0, 0, 0, 0) 51%), radial-gradient(circle at center, #ffa6b6 45%, rgba(0, 0, 0, 0.2) 45%, rgba(0, 0, 0, 0.2) 52%, rgba(0, 0, 0, 0) 52%), linear-gradient(45deg, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.2) 48%, rgba(0, 0, 0, 0.2) 52%, rgba(0, 0, 0, 0) 52%), linear-gradient(65deg, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.2) 48%, rgba(0, 0, 0, 0.2) 52%, rgba(0, 0, 0, 0) 52%), linear-gradient(22deg, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.2) 48%, rgba(0, 0, 0, 0.2) 54%, rgba(0, 0, 0, 0) 54%);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 75%, 100% 95%, 100% 60%;
+    background-position: center center;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 70px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.card-title_a {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    font-family:'Times New Roman';
+    color: #323232;
+    word-wrap: break-word;
+    /* Ngắt dòng khi chữ quá dài */
+    overflow-wrap: break-word;
+    /* Ngắt dòng khi chữ quá dài */
+}
+
+.card-subtitle_a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    word-wrap: break-word;
+    font-family:'Times New Roman';
+    /* Ngắt dòng khi chữ quá dài */
+    overflow-wrap: break-word;
+    /* Ngắt dòng khi chữ quá dài */
+}
+
+.card-divider_a {
+    width: 100%;
+    border: 2px solid #323232;
+    border: 50px;
+}
+
+.card-footer_a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-price_a {
+    font-size: 12px;
+    font-weight: 500;
+    color: #ff0000;
+    margin-left:0;
+
+}
+
+.card-price_a span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #666;
+}
+
+.card-btn_a {
+    height: 35px;
+    background: #fff;
+    border: 2px solid #323232;
+    border-radius: 5px;
+    padding: 0 15px;
+    transition: all 0.3s;
+}
+
+.card-btn_a svg {
+    width: 100%;
+    height: 100%;
+    fill: #323232;
+    transition: all 0.3s;
+}
+
+.card-img_a:hover {
+    transform: translateY(-3px);
+}
+
+.card-btn_a:hover {
+    border: 2px solid #2d8cf0;
+}
+
+.card-btn_a:hover svg {
+    fill: #2d8cf0;
+}
+
+.card-btn_a:active {
+    transform: translateY(3px);
+}
+
+@media (max-width: 768px) {
+    .carousel-inner {
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    .card_sp {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        /* Cho phép cuộn ngang */
+        flex-wrap: nowrap;
+        /* Giữ các thẻ trên một dòng */
+        height: auto;
+    }
+
+    .card_a {
+        flex: 0 0 auto;
+        /* Đảm bảo các thẻ không co lại */
+        margin-right: 10px;
+        /* Khoảng cách giữa các thẻ */
+    }
+
+    .card-img_a,
+    .card-title_a,
+    .card-subtitle_a,
+    .card-footer_a {
+        font-size: 14px;
+        font-weight: 400;
+        color: #228b22;
+    }
+}
+
+/* From Uiverse.io by barisdogansutcu */
+.button_8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding: 0 10px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: solid 2px black;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.button_8:active {
+    transform: scale(0.9);
+    transition: all 100ms ease;
+}
+
+.button_8 svg {
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.play {
+    transition: all 0.5s ease;
+    transition-delay: 300ms;
+}
+
+.button_8:hover svg {
+    transform: scale(3) translate(50%);
+}
+
+.now {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    z-index: 2;
+    color: black !important;
+}
+
+.button_8:hover .now {
+    transform: translateX(10px);
+    transition-delay: 300ms;
+}
+
+.button_8:hover .play {
+    transform: translateX(200%);
+    transition-delay: 300ms;
+}
+
+/* From Uiverse.io by eslam-hany */
+.book {
+    position: relative;
+    border-radius: 10px;
+    width: 400px;
+    height: 265px;
+    background-color: #ecf0f1;
+    -webkit-box-shadow: 1px 1px 2px #000;
+    box-shadow: 0.5px 0.5px 0.5px #000;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+    margin-left: 22px;
+    text-align: center;
+}
+
+.book li p {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: #603535;
+    font-size: 15px;
+    margin-left: 15%;
+}
+
+.book li img {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    margin-bottom: 10px;
+}
+
+.cover {
+    top: 0;
+    position: absolute;
+    background-color: #ecf0f1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 0.5px 0.5px 0.5px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotateY(-80deg);
+    -ms-transform: rotateY(-80deg);
+    transform: rotateY(-80deg);
+}
+
+
+.binhthuong {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img_gioithieu {
+    border-radius: 10px;
+}
+
+/* From Uiverse.io by SanketSuryawanshi */
+.main_div {
+    position: absolute;
+    top: 75%;
+    left: 60%;
+}
+
+.main_div::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    top: -7px;
+    left: -7px;
+    z-index: -5;
+    border-top: 3px solid #3992e6;
+    border-left: 3px solid #3992e6;
+    transition: 0.5s;
+}
+
+.main_div::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    bottom: -7px;
+    right: -7px;
+    z-index: -5;
+    border-right: 3px solid #3992e6;
+    border-bottom: 3px solid #3992e6;
+    transition: 0.5s;
+}
+
+.main_div:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.main_div:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.main_div .button_3 {
+    padding: 0.7em 2em;
+    font-size: 16px;
+    background: #603535;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media (max-width: 425px) {
+    .binhthuong {
+        display: none !important;
+    }
+
+    .book {
+        position: relative;
+        border-radius: 20px !important;
+        width: 300px;
+        height: 200px;
+        background-color: #ecf0f1;
+        -webkit-box-shadow: 1px 1px 2px #000;
+        box-shadow: 0.5px 0.5px 0.5px #000;
+        -webkit-perspective: 2000px;
+        perspective: 2000px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        color: #000;
+        margin-left: 22px;
+        text-align: left;
+    }
+
+    .book li p {
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        color: #603535;
+        font-size: 10px;
+        margin-left: 15%;
+    }
+
+    .book li img {
+        position: absolute;
+        top: 0;
+        left: 40%;
+        margin-bottom: 10px;
+    }
+
+    .cover {
+        top: 0;
+        position: absolute;
+        background-color: #ecf0f1;
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        cursor: pointer;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        -webkit-transform-origin: 0;
+        -ms-transform-origin: 0;
+        transform-origin: 0;
+        -webkit-box-shadow: 1px 1px 12px #000;
+        box-shadow: 0.5px 0.5px 1px #000;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .book:hover .cover {
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        -webkit-transform: rotateY(-80deg);
+        -ms-transform: rotateY(-80deg);
+        transform: rotateY(-80deg);
+    }
+
+
+    .binhthuong {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .img_gioithieu {
+        border-radius: 10px;
+    }
+
+    /* From Uiverse.io by SanketSuryawanshi */
+    .main_div {
+        position: absolute;
+        top: 75%;
+        left: 60%;
+    }
+
+    .main_div::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        top: -7px;
+        left: -7px;
+        z-index: -5;
+        border-top: 3px solid #3992e6;
+        border-left: 3px solid #3992e6;
+        transition: 0.5s;
+    }
+
+    .main_div::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        bottom: -7px;
+        right: -7px;
+        z-index: -5;
+        border-right: 3px solid #3992e6;
+        border-bottom: 3px solid #3992e6;
+        transition: 0.5s;
+    }
+
+    .main_div:hover::before {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main_div:hover::after {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main_div .button_3 {
+        padding: 0.25em 1em;
+        font-size: 16px;
+        background: #603535;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+    .text_4 {
+        font-size: 13px !important;
+        /*font-family: "Raleway", sans-serif;*/
+        font-family: 'Times New Roman';
+        font-weight: 700;
+        font-style: normal;
+        text-align: center;
+        color: #570557;
+    }
+
+    .text_4 p {
+        font-size: 50%;
+        /*font-family: "Raleway", sans-serif;*/
+        font-family: 'Times New Roman';
+        font-weight: 700;
+        font-style: normal;
+        text-align: left !important;
+        color: #570557;
+    }
+
+    .button_1 {
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        background-color: #000000 !important;
+        border-radius: 9999px;
+        width: 60px !important;
+        margin-left: 60% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        column-gap: 10px;
+        font-weight: bold;
+        border: 3px solid #000000;
+        outline: none;
+        overflow: hidden;
+        font-size: 7px !important;
+        cursor: pointer;
+        top: -10px !important;
+    }
+
+    .button_1 .icon {
+        width: 12px !important;
+        height: 12px !important;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .button_1:hover {
+        transform: scale(1.05);
+        border-color: rgb(255, 255, 255);
+    }
+
+    .button_1:hover .icon {
+        transform: translate(4px);
+    }
+
+    .button_1:hover::before {
+        animation: shine 1.5s ease-out infinite;
+    }
+
+    .button_1::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        background-image: linear-gradient(120deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 70%);
+        top: 0;
+        left: -100px;
+        opacity: 0.6;
+    }
+
+    @keyframes shine {
+        0% {
+            left: -100px;
+        }
+
+        60% {
+            left: 100%;
+        }
+
+        to {
+            left: 100%;
+        }
+    }
+
+    .container_1 {
+        display: flex !important;
+        flex-wrap: wrap !important;        
+        height: 200px!important;
+        overflow:hidden!important;
+    }
+    .hinh1, .hinh2 ,.hinh3, .hinh4{
+        margin-left:5%!important;
+        width:45%!important;
+        height:auto!important;
+        position: static !important;        
+        margin-top:0!important; 
+    }
+    .hinh img{
+        position:static !important;
+    }
+    .text_5 {
+        position:static !important;
+    }
+
+}
+
+.text_4 {
+    font-size: 50px;
+    /*font-family: "Raleway", sans-serif;*/
+    font-family: 'Times New Roman';
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: #570557;
+}
+
+.text_4 p {
+    font-size: 50%;
+    /*font-family: "Raleway", sans-serif;*/
+    font-family: 'Times New Roman';
+    font-weight: 700;
+    font-style: normal;
+    text-align: justify;
+    color: #570557;
+}
+
+/* From Uiverse.io by satyamchaudharydev */
+.button_1 {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #000000 !important;
+    border-radius: 9999px;
+    width: 120px;
+    margin-left: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    column-gap: 10px;
+    font-weight: bold;
+    border: 3px solid #000000;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button_1 .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button_1:hover {
+    transform: scale(1.05);
+    border-color: rgb(255, 255, 255);
+}
+
+.button_1:hover .icon {
+    transform: translate(4px);
+}
+
+.button_1:hover::before {
+    animation: shine 1.5s ease-out infinite;
+}
+
+.button_1::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0) 70%);
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+}
+
+@keyframes shine {
+    0% {
+        left: -100px;
+    }
+
+    60% {
+        left: 100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+.container_1 {    
+    width: 100%;
+    /* Đặt chiều rộng cho container */
+    height: 700px;
+    /* Đặt chiều cao cho container */
+    overflow: hidden;
+    /* Ẩn các phần tràn ra ngoài */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hinh1 {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    margin-left:25%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.hinh2 {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    margin-left:25%;
+    left: 25%;
+    top: 15%;
+    z-index: 2;
+}
+
+.hinh3 {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    margin-left:25%;
+    left: 0%;
+    top: 35%;
+    z-index: 3;
+}
+
+.hinh4 {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    margin-left:25%;
+    left: 25%;
+    top: 50%;
+    z-index: 4;
+}
+
+.hinh:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 6;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+}
+.text_5{
+    position:absolute;
+    left:60%;
+    top:70%;
+    width:20%;
+}
+
+/* From Uiverse.io by zjssun */ 
+.button_2 {
+    text-align:center;
+    height:auto;
+    width:100%;
+    position: relative;
+    border-radius: 6px;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    opacity:0.5;
+    transition: all 0.2s ease;
+    background-color:rgb(255, 255, 255);
+}
+
+.button_2:active {
+  transform: scale(0.96);
+}
+
+.button_2:before,
+.button_2:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button_2:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button_2:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+
+/* From Uiverse.io by MuhammadHasann */ 
+.container_button {
+  display: grid;
+  grid-columns: 1fr 1fr 1fr;
+  grid-rows: 1fr 1fr;
+  grid-template: "bt-1 bt-2 bt-3"
+    "bt-4 bt-5 bt-6";
+  position: relative;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container_button:active {
+  transform: scale(0.95);
+}
+
+.hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+.bt-1 { 
+    grid-row: 1; 
+    grid-column: 1; /* Vị trí (1, 1) */
+}
+.bt-2 { 
+    grid-row: 1; 
+    grid-column: 2; /* Vị trí (1, 2) */
+}
+.bt-3 { 
+    grid-row: 2; 
+    grid-column: 1; /* Vị trí (2, 1) */
+}
+.bt-4 { 
+    grid-row: 2; 
+    grid-column: 2; /* Vị trí (2, 2) */
+}
+.bt-5 { 
+    grid-row: 3; 
+    grid-column: 1; /* Vị trí (3, 1) */
+}
+.bt-6 { 
+    grid-row: 3; 
+    grid-column: 2; /* Vị trí (3, 2) */
+}
+
+
+.bt-1:hover ~ .button_5 {
+  transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px -2px#ecf0f1;
+}
+
+.bt-1:hover ~ .button_5::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px -2px#ecf0f1;
+}
+
+.bt-3:hover ~ .button_5 {
+  transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px -2px#ecf0f1;
+}
+
+.bt-3:hover ~ .button_5::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px -2px#ecf0f1;
+}
+
+.bt-4:hover ~ .button_5 {
+  transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px 2px#ecf0f1;
+}
+
+.bt-4:hover ~ .button_5::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px 2px#ecf0f1;
+}
+
+.bt-6:hover ~ .button_5 {
+  transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px 2px#ecf0f1;
+}
+
+.bt-6:hover ~ .button_5::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px 2px #ecf0f1;
+}
+
+.hover:hover ~ .button_5::before {
+  background: transparent;
+}
+
+.hover:hover ~ .button_5::after {
+  content: "Click";
+  top: -150%;
+  transform: translate(-50%, 0);
+  font-size: 34px;
+  color: #f19c2b;
+}
+
+.button_5 {
+  position: absolute;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  border: 3px solid #f39923;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button_5::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: #f5ae51;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.button_5::after {
+  content: "Khám phá";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 47px;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+@keyframes shake {
+  0% {
+    left: 45%;
+  }
+
+  25% {
+    left: 54%;
+  }
+
+  50% {
+    left: 48%;
+  }
+
+  75% {
+    left: 52%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+.pagination a{
+   color:#000000;
+}
+.loaisp_kh{
+    overflow-y:auto;
+}
+.loaisp_kh .nav-link {
+    color: #000000; /* Default Bootstrap link color */
+    text-decoration: none; /* Removes underline from links */
+    padding: 10px; /* Adds padding inside the links */
+    border-bottom: 1px solid #ddd; /* Adds a border around the links */
+    border-radius: 1px; /* Rounds the corners of the borders */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    font-family:'Times New Roman';
+   
+}
+.loaisp_kh .nav-item {
+    margin-bottom: 5px; /* Adds space between the items */
+}
+.loaisp_kh .nav-link:hover {
+    color: rgb(255, 255, 255); /* Changes text color on hover */
+    background-color: #7b7b7b; /* Changes background color on hover */
+    opacity:0.5;
+    transform:translate(1);
+    box-shadow:1px 1px 2px 1px;
+}
+.dropdown_menu_1 {
+    position: absolute;
+    will-change: transform;
+    top: 5%;
+    transform: translate3d(0px, 38px, 0px);
+    width:200px;
+}
+.dropdown_menu_2 {
+   
+    position: absolute;
+    will-change: transform;
+    top: 5%;
+    left: 0;
+    transform: translate3d(0px, 38px, 0px);
+    width:200px!important;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+
+}
+
+.dropdown-item {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/*=======================================================*/
+@media(max-width: 425px) {
+    .nav-item:hover .dropdown-menu {
+        display: block;
+        border-radius: 1px !important;
+    }
+    .dropdown-menu {
+        display: block;
+    }
+    .button_5 {
+        position: absolute;
+        padding: 0;
+        width: 135px;
+        height: 30px;
+        background: transparent;
+        font-size: 17px;
+        font-weight: 900;
+        border: 3px solid #f39923;
+        border-radius: 12px;
+        transition: all 0.3s ease-in-out;
+        top: 100%;
+    }
+}
+
+/* From Uiverse.io by Yaya12085 */ 
+.form-container {
+  width: 320px;
+  border-radius: 0.75rem;
+  background-color: rgba(17, 24, 39, 1);
+  padding: 2rem;
+  color: rgba(243, 244, 246, 1);
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.form {
+  margin-top: 1.5rem;
+}
+
+.input-group {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.input-group label {
+  display: block;
+  color: rgba(156, 163, 175, 1);
+  margin-bottom: 4px;
+}
+
+.input-group input {
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(55, 65, 81, 1);
+  outline: 0;
+  background-color: rgba(17, 24, 39, 1);
+  padding: 0.75rem 1rem;
+  color: rgba(243, 244, 246, 1);
+}
+
+.input-group input:focus {
+  border-color: rgb(167, 139, 250);
+}
+
+.forgot {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgba(156, 163, 175,1);
+  margin: 8px 0 14px 0;
+}
+
+.forgot a,.signup a {
+  color: rgba(243, 244, 246, 1);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot a:hover, .signup a:hover {
+  text-decoration: underline rgba(167, 139, 250, 1);
+}
+
+.sign {
+  display: block;
+  width: 100%;
+  background-color: rgba(167, 139, 250, 1);
+  padding: 0.75rem;
+  text-align: center;
+  color: rgba(17, 24, 39, 1);
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+}
+
+.social-message {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.line {
+  height: 1px;
+  flex: 1 1 0%;
+  background-color: rgba(55, 65, 81, 1);
+}
+
+.social-message .message {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgba(156, 163, 175, 1);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons .icon {
+  border-radius: 0.125rem;
+  padding: 0.75rem;
+  border: none;
+  background-color: transparent;
+  margin-left: 8px;
+}
+
+.social-icons .icon svg {
+  height: 1.25rem;
+  width: 1.25rem;
+  fill: #fff;
+}
+
+.signup {
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgba(156, 163, 175, 1);
+}
+.card_1 {
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+ border-radius: 0.75rem;
+  transition: all .3s;
+}
+
+.card_2 {
+  border-radius: 0;
+  transition: all .2s;
+}
+
+.card_2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.card_1:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+.number-control {
+  display: flex;
+  align-items: center;
+}
+
+.number-left, .number-right {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.number-quantity {
+  width: 60px;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+}
+
+
+/* From Uiverse.io by gharsh11032000 */ 
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: #000000;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #000000;
+  font-size:1rem;
+  font-weight:400;
+  font-family:'Alumni Sans Inline One', sans-serif;
+  box-shadow: 0 0 0 2px rgb(255, 255, 255);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: #000000;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: greenyellow;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #212121;
+}
+
+.animated-button:active {
+  box-shadow: 0 0 0 4px greenyellow;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+
+
+/* From Uiverse.io by JaydipPrajapati1910 */ 
+.button_4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+  background-color: #181717;
+  outline: 3px #181717 solid;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+.button_4 p{
+    margin-top:10%!important;
+}
+.button_4 .fa-shopping-cart{
+    color:rgb(255, 255, 255);
+}
+.button_4 .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+  margin-left:5px;
+}
+
+.button_4:hover {
+  background-color: transparent;
+}
+
+.button_4:hover .text {
+  color: #181717;
+}
+
+.button_4 :hover .fa-shopping-cart{
+  fill: #181717!important;
+}
+
+.card_3 {
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 15px 30px -5px;
+  /*background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);*/
+  background-image:linear-gradient(144deg,rgba(151, 65, 252, 0.2), rgba(0, 0, 0, 0.5) 50%,#9d9d9d)
+}
+
+.card__content {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+.card__content .row .col{
+    text-align:center;
+    font-family:'Alumni Sans Inline One', sans-serif; color:#29042a;
+    font-size:1.5rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn_1 {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+  background-size: 250%;
+  background-position: left;
+  color: #ffd277;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+
+.Btn_1::before {
+  position: absolute;
+  content: "ĐẶT ĐƠN";
+  color: #ffd277;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+}
+
+.Btn_1:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn_1:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn_1:active {
+  transform: scale(0.95);
+}
+
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  column-gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+textarea{
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+
+/* From Uiverse.io by MuhammadHasann */ 
+.button_9 {
+  position: relative;
+  padding: 12px 35px;
+  background: #fec195;
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 3px solid #fec195;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #000000;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s ease;
+}
+
+.button_9:hover {
+  background: transparent;
+  color: #fec195;
+  box-shadow: 0 0 25px #000000;
+}
+
+.button_9:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.button_9:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.button_9:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.button_9:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.button_9:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.button_9:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #fffdef;
+}
+
+
+.form-container_1 {
+  width: 50%!important;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+
+.form-container_1 .form {
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px;
+}
+
+.form-container_1 .form-group {
+  display: flex;
+  flex-direction: column;
+  column-gap: 2px;
+}
+.form-container_1 .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container_1 .form-group input {
+  width: 80%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.form-container_1 .form-group input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-container_1 .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #717171;
+  font-weight: 600;
+  width: 30%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  column-gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container_1 .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+
+.group {
+ display: flex;
+ line-height: 28px;
+ align-items: center;
+ position: relative;
+ max-width: 100%;
+ width:100%;
+ margin-bottom:10px;
+}
+
+.input {
+ height: 40px;
+ line-height: 28px;
+ padding: 0 1rem;
+ padding-left: 2.5rem;
+ border: 2px solid transparent;
+ border-radius: 8px;
+ outline: none;
+ background-color: #f3f3f4;
+ color: #0d0c22;
+ transition: .3s ease;
+}
+
+
+.input:focus,.input:hover {
+ outline: none;
+ border-color: rgba(234,76,137,0.4);
+ background-color: #fff;
+ box-shadow: 0 0 0 4px #d2f9f3;
+}
+
+
+
+
+
+
+
+
+
+
+

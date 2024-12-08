@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "DANHSACHCHITIETSPPHIEUNHAP";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+
+@using SHOP_SNEAKER.Models;
+@model List<CHITIETPHIEUNHAP>
+@{
+    int k = ViewBag.madonhang;
+}
+<h2>Danh Sách Chi Tiết Phiếu Nhập @k</h2>
+
+    <div class="d-flex">
+        <div class="group">
+            <a href="@Url.Action("THEMCTPN", "Quanli", new { id = k })" class=" btn btn-group btn-success">Thêm Chi Tiết Phiếu nhập</a>
+        </div>
+        @if (Model.Count() != 0)
+        {
+
+            if (Session["phieunhap_pn"] != null)
+            {
+                PHIEUNHAP a = Session["phieunhap_pn"] as PHIEUNHAP;
+                if (a.TRANGTHAI == "Đang Giao" || a.TRANGTHAI == "Đã xác nhận" || a.TRANGTHAI == "Mới Lập")
+                {
+                    <div class="group">
+                        <button onclick="location.href = '/Quanli/XACNHANPHIEUNHAP'" class="btn btn-group btn-primary">Xác nhận đơn hàng</button>
+                    </div>
+                    <div class="group">
+                        <button onclick="location.href = '/Quanli/HUYPHIEUNHAP'" class="btn btn-group btn-danger">Huỷ Đơn Hàng</button>
+                    </div>
+                }
+                if (a.TRANGTHAI == "Đã Nhận")
+                {
+                    <div class="group">
+                        <button onclick="location.href = '/Quanli/XACNHANNHAPHANG'" class="btn btn-group btn-secondary">Xác Nhận Nhập Hàng</button>
+                    </div>
+                }
+                
+            }
+
+        }
+        <div class="group">
+            <div class="d-flex" style="column-gap:5px">
+                @Html.ValidationMessage("baoloi", "", new { @class = "text-danger" })
+                <input placeholder="Tìm kiếm theo mã . . ." type="hidden" name="baoloi">
+            </div>
+        </div>
+
+    </div>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Mã DH</th>
+            <th>Mã SP</th>
+            <th>Mã KC</th>
+            <th>Mã MS</th>
+            <th>Số Lượng</th>
+            <th>Thành tiền</th>
+        </tr>
+    </thead>
+    <tbody id="productTable">
+        @foreach (CHITIETPHIEUNHAP item in Model)
+        {
+            <tr class="sanpham_1">
+                <td>@item.MAPN</td>
+                <td>@item.MASP</td>
+                <td>@item.MAMS</td>
+                <td>@item.MAKC</td>
+                <td>@item.SOLUONG</td>
+                <td>@item.DONGIA</td>
+                <td>
+
+                    <a href="@Url.Action("SUA_CTPN", "Quanli", new { id = item.MAPN, msp = item.MASP, makc = item.MAKC.Trim(), mams = item.MAMS.Trim() })" class="btn btn-warning btn-sm">Sửa</a>
+                    <a href="@Url.Action("XOA_CTPN", "Quanli", new { id = item.MAPN, msp = item.MASP, makc = item.MAKC.Trim(), mams = item.MAMS.Trim() })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

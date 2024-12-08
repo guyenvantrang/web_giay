@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "SUA_SP";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+@using SHOP_SNEAKER.Models;
+@model SANPHAM
+<form action="/Quanli/SUA_SP_" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+    <h2>Thêm Sản Phẩm</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Tên Sản Phẩm @Html.ValidationMessage("ten_sp", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.MASP" name="ma_sp" id="ten_kh" type="text" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Loại Sản Phẩm @Html.ValidationMessage("loai_sp", "", new { @class = "text-danger" })</label>
+                    <select name="loai_sp" class="form-select" aria-label="Default select example">
+
+                        @if (Session["LoaiSanPham"] != null)
+                        {
+                            List<LOAISANPHAM> l = Session["LoaiSanPham"] as List<LOAISANPHAM>;
+                            LOAISANPHAM o = l.FirstOrDefault(t => t.MALOAI == Model.MALOAI);
+                            <option value="@o.MALOAI" selected>@o.TENLOAI</option>
+                            foreach (LOAISANPHAM a in l)
+                            {
+                                <option value="@a.MALOAI">@a.TENLOAI</option>
+                            }
+                        }
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Tên Sản Phẩm @Html.ValidationMessage("ten_sp", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.TENSP" name="ten_sp" id="ten_kh" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Đơn Giá @Html.ValidationMessage("dongia_sp", "", new { @class = "text-danger" })</label>
+                    <input name="dongia_sp" id="ten_kh" type="number" value="@Model.GIAGOCSP" class="form-control" min="1">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Nhãn Hàng @Html.ValidationMessage("nhanhang_sp", "", new { @class = "text-danger" })</label>
+                    <select name="nhanhang_sp" class="form-select" aria-label="Default select example">
+
+                        @if (Session["nhanhang"] != null)
+                        {
+                            List<NHANHANG> l = Session["nhanhang"] as List<NHANHANG>;
+                            NHANHANG k = l.FirstOrDefault(t => t.MANH == Model.MANH);
+                            <option value="@k.MANH" selected>@k.TENNH</option>
+                            foreach (NHANHANG a in l)
+                            {
+                                <option value="@a.MANH">@a.TENNH</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Hình ảnh chính @Html.ValidationMessage("hinhanhchinh_sp", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.HINHANHBIA" name="hinhanhchinh_sp" id="ten_kh" type="file" class="form-control">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Hình ảnh con @Html.ValidationMessage("maha_sp", "", new { @class = "text-danger" })</label>
+                    <select name="maha_sp" class="form-select" aria-label="Default select example">
+
+
+                        @if (Session["HinhAnh"] != null)
+                        {
+                            List<HINHANH> l = Session["HinhAnh"] as List<HINHANH>;
+                            HINHANH k = l.FirstOrDefault(t => t.MAHA == Model.MAHA);
+                            <option value="@k.MAHA" selected>@k.TENHINHANH</option>
+
+                            foreach (HINHANH a in l)
+                            {
+                                <option value="@a.MAHA">@a.TENHINHANH</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Nội dung mô tả @Html.ValidationMessage("mota_sp", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.MOTA" name="mota_sp" id="ten_kh" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    @if (Model.HINHANHBIA != null)
+                    {
+                        <img src="~/Content/hinhanh/hinhanhsanpham/@Model.HINHANHBIA" alt="Hình ảnh chính" style="max-width: 100px; max-height: 100px;">
+                    }
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="">
+                <button style="margin-left:25px;" type="submit" class="btn btn-primary">Cập nhật</button>
+            </div>
+</form>

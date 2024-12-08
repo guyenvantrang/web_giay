@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "admin";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+
+@using SHOP_SNEAKER.Models;
+@model List<DONHANG>
+
+<div class="container mt-5">
+    <h2 class="text-center">Doanh Thu Theo Tháng và Năm</h2>
+
+    <!-- Doanh thu theo tháng và năm -->
+    <div class="card">
+        <div class="card-header">
+            <h4>Doanh Thu Tổng Quan</h4>
+        </div>
+        <div class="card-body">
+            <!-- Tổng doanh thu -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Tổng Doanh Thu: <strong>@(Model.Sum(d => (decimal)d.TONGTIEN).ToString("N0")) VND</strong></h5>
+                </div>
+                <div class="col-md-6 text-right">
+                    <!-- Nút lọc theo năm -->
+                    <button class="btn btn-custom">Lọc Theo Năm</button>
+                </div>
+            </div>
+            <hr />
+            <!-- Biểu đồ doanh thu theo tháng -->
+            <div class="row">
+                <div class="col-md-12">
+                    <canvas id="chartDoanhThu" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Thêm Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // Lấy dữ liệu doanh thu từ ViewBag (đã được chuyển thành JSON)
+    var doanhThuThang = @Html.Raw(ViewBag.DoanhThuThang);
+
+    // Mảng tháng (dùng làm nhãn cho biểu đồ)
+    var thang = ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"];
+
+    // Mảng để lưu doanh thu cho từng tháng, mặc định là 0
+    var doanhThu = new Array(12).fill(0);
+
+    // Điền doanh thu vào mảng doanhThu theo tháng
+    doanhThuThang.forEach(function(item) {
+        var monthIndex = item.Month - 1; // Tháng là số từ 1 đến 12, nhưng mảng JavaScript bắt đầu từ 0
+        doanhThu[monthIndex] = item.Total; // Gán tổng doanh thu cho tháng tương ứng
+    });
+
+    // Vẽ biểu đồ
+    var ctx = document.getElementById('chartDoanhThu').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'line', // Kiểu biểu đồ: line (đường)
+        data: {
+            labels: thang, // Nhãn của biểu đồ (tên tháng)
+            datasets: [{
+                label: 'Doanh Thu', // Nhãn cho biểu đồ
+                data: doanhThu, // Dữ liệu doanh thu
+                borderColor: 'rgba(75, 192, 192, 1)', // Màu đường biên
+                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Màu nền
+                fill: true // Cho phép tô màu dưới đường
+            }]
+        },
+        options: {
+            responsive: true, // Biểu đồ sẽ tự động điều chỉnh khi thay đổi kích thước
+            scales: {
+                y: {
+                    beginAtZero: true // Bắt đầu trục Y từ 0
+                }
+            },
+            // Thêm cấu hình cho tooltips để hiển thị doanh thu
+            plugins: {
+                tooltip: {
+                    enabled: true, // Bật tooltips
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return 'Doanh thu: ' + tooltipItem.raw.toLocaleString() + ' VND'; // Hiển thị doanh thu với định dạng số
+                        }
+                    }
+                }
+            }
+        }
+    });
+    // Lắng nghe sự kiện khi nhấn nút "Lọc Theo Năm"
+    document.querySelector('.btn-custom').addEventListener('click', function() {
+        // Lấy giá trị năm mà người dùng chọn
+        var selectedYear = prompt("Nhập năm bạn muốn lọc:"); // Tạm thời dùng prompt để nhập năm
+
+        // Kiểm tra nếu người dùng nhập năm hợp lệ
+        if (selectedYear && !isNaN(selectedYear)) {
+            // Lọc dữ liệu doanh thu theo năm
+            var filteredData = doanhThuThang.filter(function(item) {
+                // Kiểm tra nếu năm của item trùng với năm người dùng chọn
+                var year = new Date(item.Month);  // Giả sử item.Month chứa dữ liệu ngày tháng
+                return year.getFullYear() === parseInt(selectedYear); // Lọc theo năm
+            });
+
+            // Kiểm tra nếu không có dữ liệu
+            if (filteredData.length === 0) {
+                alert("Không có dữ liệu cho năm " + selectedYear);
+                return;
+            }
+
+            // Mảng doanh thu mới (12 tháng), mặc định là 0
+            var doanhThu = new Array(12).fill(0);
+
+            // Điền dữ liệu vào mảng doanhThu cho từng tháng
+            filteredData.forEach(function(item) {
+                var monthIndex = new Date(item.Month).getMonth(); // Lấy tháng từ dữ liệu (mảng JavaScript bắt đầu từ 0)
+                doanhThu[monthIndex] = item.Total; // Gán tổng doanh thu cho tháng tương ứng
+            });
+
+            // Cập nhật lại biểu đồ với dữ liệu mới
+            chart.data.datasets[0].data = doanhThu; // Cập nhật dữ liệu vào biểu đồ
+            chart.update(); // Cập nhật biểu đồ để hiển thị dữ liệu mới
+        } else {
+            alert("Vui lòng nhập năm hợp lệ!");
+        }
+    });
+
+</script>

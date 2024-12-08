@@ -1,0 +1,21 @@
+﻿@using SHOP_SNEAKER.Models;
+@model List<GIAODIENTRANGCHINH>
+@foreach (GIAODIENTRANGCHINH a in Model)
+{
+    <div class="carousel-item @((Model.IndexOf(a) == 0) ? "active" : "")">
+        <img src="~/Content/hinhanh/hinhgiaodien/@a.HINHANH" class=" img-fluid w-100" alt="@a.HINHANH">
+        <div class="carousel-caption d-flex align-items-center justify-content-center">
+            <a href="/Khachhang/@a.DUONGDAN">
+                <div class="container_button">
+                    <div class="hover bt-1"></div>
+                    <div class="hover bt-2"></div>
+                    <div class="hover bt-3"></div>
+                    <div class="hover bt-4"></div>
+                    <div class="hover bt-5"></div>
+                    <div class="hover bt-6"></div>
+                    <div class="button_5"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+}

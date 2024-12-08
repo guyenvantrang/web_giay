@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "THEMCTSP";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+
+@using SHOP_SNEAKER.Models;
+@model SANPHAM
+@*  Session["KichCo_ctsp"] = kc;
+    Session["MauSac_ctsp"] = ms;
+    Session["nhanhang_ctsp"] = nh;*@
+
+<form action="/Quanli/THEMCTSP" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+    <h2>Thêm Sản Phẩm</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="form-label">Mã Sản Phẩm @Html.ValidationMessage("ma_ctsp", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.MASP" name="ma_ctsp" id="ten_kh" type="number" class="form-control" readonly>
+                </div>
+            </div>
+            
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Kích Cỡ @Html.ValidationMessage("kc_ctsp", "", new { @class = "text-danger" })</label>
+                    <select name="kc_ctsp" class="form-select" aria-label="Default select example">
+                        <option value="" selected>Chọn một tùy chọn</option>
+                        @if (Session["KichCo_ctsp"] != null)
+                        {
+                            List<KICHCO> l = Session["KichCo_ctsp"] as List<KICHCO>;
+                            foreach (KICHCO a in l)
+                            {
+                                <option value="@a.MAKC">@a.KICHCO1</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Màu Sắc @Html.ValidationMessage("ms_ctsp", "", new { @class = "text-danger" })</label>
+                    <select name="ms_ctsp" class="form-select" aria-label="Default select example">
+                        <option value="" selected>Chọn một tùy chọn</option>
+                        @if (Session["MauSac_ctsp"] != null)
+                        {
+                            List<MAUSAC> l = Session["MauSac_ctsp"] as List<MAUSAC>;
+                            foreach (MAUSAC a in l)
+                            {
+                                <option value="@a.MAMS">@a.TENMAUSAC</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Nội dung mô tả @Html.ValidationMessage("mota_ctsp", "", new { @class = "text-danger" })</label>
+                    <input name="mota_ctsp" id="ten_kh" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Nội dung mô tả @Html.ValidationMessage("soluong_ctsp", "", new { @class = "text-danger" })</label>
+                    <input value="0" name="soluong_ctsp" id="ten_kh" type="number" class="form-control" min="0">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="">
+        <button style="margin-left:25px; margin-top:10px" type="submit" class="btn btn-primary">Cập nhật</button>
+    </div>
+</form>
+

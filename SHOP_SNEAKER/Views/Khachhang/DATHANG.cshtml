@@ -1,0 +1,223 @@
+﻿@{
+    ViewBag.Title = "DATHANG";
+    Layout = "~/Views/Khachhang/Index.cshtml";
+}
+@using SHOP_SNEAKER.Models;
+<div class="container" style="margin-top: 100px;">
+    <div class="row">
+        <div class="col-4">
+            <img class="w-100 img-fluid" src="~/Content/hinhanh/hinhgiaodien/dangnhap.jpg" />
+            <img class="w-50 img-fluid" src="~/Content/hinhanh/hinhgiaodien/chuyenkhoan.jpg" />
+        </div>
+        <div class="col-8">
+            <h2 class="text-center" style="font-family:'Alumni Sans Inline One', sans-serif; color:#29042a;">Điền Thông Tin Khách Hàng</h2>
+            <form class="form" action="/Khachhang/DATHANG" method="post">
+                <div class="row">
+                    <div class="col-5 d-flex justify-content-center align-items-center">
+                        <div class="form-container">
+                            <h2 class="text-center" style="font-family:'Alumni Sans Inline One', sans-serif; color:#ffffff;">Thông Tin Khách Hàng</h2>
+                            @if (Session["khachhangdangnhap"] != null)
+                            {
+                                KHACHHANG p = Session["khachhangdangnhap"] as KHACHHANG;
+                                <div class="form-group">
+                                    <label for="">Họ và tên</label>
+                                    <input name="hovaten" id="email" type="text" value="@p.TENKH">
+                                    <div class="form-group">
+                                        <label for="">Số điện thoại</label>
+                                        <input name="sodienthoai" id="email" type="number" value="@p.SODIENTHOAI">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Giới tính</label>
+                                        <input name="gioitinh" id="email" type="text" value="@p.GIOITINH">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Địa chỉ</label>
+                                        <input name="diachicuthe" id="email" type="text" value="@p.DIACHI">
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+
+                    </div>
+                    <div class="col-5">
+                        <div class="form-container">
+                            <h2 class="text-center" style="font-family:'Alumni Sans Inline One', sans-serif; color:#ffffff;">Thông Tin Địa Chỉ</h2>
+
+                            <div class="">
+                                <div class="form-group">
+                                    <label for="">Tỉnh / Thành phố @Html.ValidationMessage("city", "", new { @class = "text-danger" })</label>
+                                    <select name="city" id="city" class="form-control">
+                                        <option value="" selected>Chọn tỉnh thành</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Quận / Huyện @Html.ValidationMessage("district", "", new { @class = "text-danger" })</label>
+                                    <select name="district" id="district" class="form-control">
+                                        <option value="" selected>Chọn Quận / Huyện</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Phường / Xã @Html.ValidationMessage("ward", "", new { @class = "text-danger" })</label>
+                                    <select name="ward" id="ward" class="form-control">
+                                        <option value="" selected>Chọn Phường / Xã</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="payment-method">Phương thức thanh toán @Html.ValidationMessage("phuongthucthanhtoan", "", new { @class = "text-danger" })</label>
+                                    <select name="phuongthucthanhtoan" class="form-control" id="payment-method">
+                                        <option value="tienmat" selected>Nhận tiền mặt khi giao hàng</option>
+                                        <option value="chuyenkhoan">Chuyển tiền ngân hàng</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="form-container">
+                            <h2 class="text-center" style="font-family:'Alumni Sans Inline One', sans-serif; color:#ffffff;">Ghi trú</h2>
+                            <div class="form-group">
+                                <label for="">Ghi trú </label>
+                                <textarea name="ghitru" id="" type="text" value="Không ghi trú"></textarea>
+                            </div>
+                            <button type="submit" class="button_9 mt-3" style="font-family:'Alumni Sans Inline One', sans-serif;">
+                                Hoàn thành
+                                <div class="star-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         xml:space="preserve"
+                                         version="1.1"
+                                         style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                         viewBox="0 0 784.11 815.53"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></g></svg>
+                                </div>
+                                <div class="star-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         xml:space="preserve"
+                                         version="1.1"
+                                         style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                         viewBox="0 0 784.11 815.53"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></g></svg>
+                                </div>
+                                <div class="star-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         xml:space="preserve"
+                                         version="1.1"
+                                         style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                         viewBox="0 0 784.11 815.53"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></g></svg>
+                                </div>
+                                <div class="star-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         xml:space="preserve"
+                                         version="1.1"
+                                         style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                         viewBox="0 0 784.11 815.53"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></g></svg>
+                                </div>
+                                <div class="star-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         xml:space="preserve"
+                                         version="1.1"
+                                         style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                         viewBox="0 0 784.11 815.53"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></g></svg>
+                                </div>
+                                <div class="star-6">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         xml:space="preserve"
+                                         version="1.1"
+                                         style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                         viewBox="0 0 784.11 815.53"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                          d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></g></svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script>
+    fetch('https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    }
+        )
+
+    var citis = document.getElementById("city");
+    var districts = document.getElementById("district");
+    var wards = document.getElementById("ward");
+    var Parameter = {
+        url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
+        method: "GET",
+        responseType: "application/json",
+    };
+    var promise = axios(Parameter);
+    promise.then(function(result) {
+        renderCity(result.data);
+    });
+
+    function renderCity(data) {
+        for (const x of data) {
+            citis.options[citis.options.length] = new Option(x.Name, x.Id);
+        }
+    citis.onchange = function() {
+        district.length = 1;
+        ward.length = 1;
+        if (this.value != "") {
+            const result = data.filter(n => n.Id === this.value);
+
+            for (const k of result[0].Districts) {
+                district.options[district.options.length] = new Option(k.Name, k.Id);
+            }
+    }
+    };
+    district.onchange = function() {
+        ward.length = 1;
+        const dataCity = data.filter((n) => n.Id === citis.value);
+        if (this.value != "") {
+            const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
+
+            for (const w of dataWards) {
+                wards.options[wards.options.length] = new Option(w.Name, w.Id);
+            }
+    }
+    };
+    }
+</script>
+

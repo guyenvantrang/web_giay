@@ -1,0 +1,71 @@
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\SHOP_SNEAKER.dll.config
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\SHOP_SNEAKER.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\SHOP_SNEAKER.pdb
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\Antlr3.Runtime.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\EntityFramework.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\Microsoft.Web.Infrastructure.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\Newtonsoft.Json.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Net.Http.Formatting.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Http.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Http.WebHost.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Mvc.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Optimization.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Providers.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Razor.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.WebPages.Deployment.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.WebPages.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.WebPages.Razor.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\WebGrease.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\EntityFramework.xml
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\Newtonsoft.Json.xml
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Net.Http.Formatting.xml
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Http.xml
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Http.WebHost.xml
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Mvc.xml
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Razor.xml
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.WebPages.xml
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.WebPages.Deployment.xml
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.WebPages.Razor.xml
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\obj\Debug\SHOP_SNEAKER.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\obj\Debug\SHOP_SNEAKER.pdb
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\PagedList.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\PagedList.Mvc.dll
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\PagedList.xml
+D:\HỌC KÌ 5\LẬP TRÌNH WEB\Đồ án cuối kì\SHOP_SNEAKER\SHOP_SNEAKER\bin\PagedList.Mvc.xml
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\SHOP_SNEAKER.dll.config
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\SHOP_SNEAKER.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\SHOP_SNEAKER.pdb
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\Antlr3.Runtime.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\EntityFramework.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\Newtonsoft.Json.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\PagedList.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\PagedList.Mvc.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Net.Http.Formatting.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Http.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Http.WebHost.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Mvc.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Optimization.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Providers.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Razor.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.WebPages.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.WebPages.Razor.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\WebGrease.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\PagedList.xml
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\PagedList.Mvc.xml
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\EntityFramework.xml
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\Newtonsoft.Json.xml
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Net.Http.Formatting.xml
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Http.xml
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Http.WebHost.xml
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Mvc.xml
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.Razor.xml
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.WebPages.xml
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\bin\System.Web.WebPages.Razor.xml
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\obj\Debug\SHOP_SNEAKER.csprojResolveAssemblyReference.cache
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\obj\Debug\SHOP_SNEAKER.dll
+C:\Users\ACER\Desktop\SHOP_SNEAKER\SHOP_SNEAKER\obj\Debug\SHOP_SNEAKER.pdb

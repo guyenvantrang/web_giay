@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "THEMCTKM";
+    Layout = "~/Views/Quanli/Quanli_admin.cshtml";
+}
+
+@using SHOP_SNEAKER.Models;
+@model KHUYENMAI
+@*  Session["KichCo_ctsp"] = kc;
+    Session["MauSac_ctsp"] = ms;
+    Session["nhanhang_ctsp"] = nh;*@
+
+<form action="/Quanli/THEMCTKM" method="post" enctype="multipart/form-data" class="form" style="margin-left:15%">
+    <h2>Thêm Sản Phẩm Cho Khuyến Mãi @Model.MAKM</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="form-label">Mã Khuyến Mãi @Html.ValidationMessage("ma_km", "", new { @class = "text-danger" })</label>
+                    <input value="@Model.MAKM.Trim()" name="ma_km" id="ten_kh" type="text" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label class="form-label">Mã Sản Phẩm @Html.ValidationMessage("masp_km", "", new { @class = "text-danger" })</label>
+                    <select name="masp_km" class="form-select" aria-label="Default select example">
+                        <option value="0" selected>Chọn một tùy chọn</option>
+                        @if (Session["sanpham_km"] != null)
+                        {
+                            List<SANPHAM> l = Session["sanpham_km"] as List<SANPHAM>;
+                            foreach (SANPHAM a in l)
+                            {
+                                <option value="@a.MASP">@a.TENSP</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="ten_kh" class="form-label">Tỉ lệ giảm ( % ) @Html.ValidationMessage("tilekm", "", new { @class = "text-danger" })</label>
+                    <input value="1" name="tilekm" id="ten_kh" type="number" class="form-control" min="1">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="">
+        <button style="margin-left:25px; margin-top:10px" type="submit" class="btn btn-primary">Cập nhật</button>
+    </div>
+</form>
+
+
